@@ -77,7 +77,7 @@ def extract_text():
                 {
                     "role": "user",
                     "content": [
-                        {"type": "text", "text": "Extract in json format the VIN, DOB and full name if it's a Voter's card. If not, just return {'status': False}. Please just the json itself, no markdown or newlines or escape characters"},
+                        {"type": "text", "text": "Extract in json format the VIN, DOB and fullname if it's a Voter's card. If not, just return {'status': False}. Please just the json itself, no markdown or newlines or escape characters"},
                         {"type": "image_url", "image_url": {"url": f"data:image/jpeg;base64,{base64_image}"}}
                     ]
                 }
