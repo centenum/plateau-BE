@@ -102,9 +102,10 @@ def upload_image():
     # Encode the decoded image back to base64 for the OCR function
     base64_image = base64.b64encode(image_data).decode('utf-8')
     result = decode_image_to_ocr(base64_image)
-    print("Result:", result)
+    print("Result:", result, type(result))
     try:
         result = dict(eval(result))
+        result["status"] = True
         print("Worked:", result, type(result))
     except Exception as e:
         print("Error:", e)
@@ -114,7 +115,7 @@ def upload_image():
     with open(file_path, 'wb') as f:
         f.write(image_data)
 
-    return jsonify({"message": "Image uploaded successfully!"}), 200
+    return jsonify({"message": "Image uploaded successfully!", "data": result}), 200
 
 if __name__ == '__main__':
     app.run(debug=True)
