@@ -2,8 +2,10 @@ from flask import Flask, render_template, request, jsonify
 from openai import OpenAI
 from PIL import Image
 import io, os, base64
+from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)  # This will enable CORS for all routes
 OPENAI_KEY = os.getenv("OPENAI_KEY")
 
 # Set up your OpenAI API key
@@ -64,6 +66,19 @@ def extract_text():
         return jsonify({"description": description})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+
+@app.route('/upload', methods=['POST'])
+def upload_image():
+    data = request.get_json()
+    image_data = data['image']
+    image_data = image_data.split(",")[1]  # Remove the data URL prefix
+    image_data = base64.b64decode(image_data)
+    
+    file_path = os.path.join('uploads', 'captured_image.png')
+    with open(file_path, 'wb') as f:
+        f.write(image_data)
+
+    return jsonify({"message": "Image uploaded successfully!"}), 200
 
 if __name__ == '__main__':
     app.run(debug=True)
