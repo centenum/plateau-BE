@@ -3,6 +3,7 @@ from openai import OpenAI
 from PIL import Image
 import io, os, base64
 from flask_cors import CORS
+from whatsapp_bot import send_whatsapp_message
 
 app = Flask(__name__)
 CORS(app)  # This will enable CORS for all routes
@@ -17,6 +18,35 @@ THIS_MODEL = "gpt-4o-mini"
 
 def encode_image(image_file):
     return base64.b64encode(image_file.read()).decode('utf-8')
+
+
+# Read the .txt file content
+ELECTION_INFO = ""
+with open('LLM_election_info.txt', 'r') as file:
+    ELECTION_INFO = file.read()
+
+def answer_based_on_election_info(user_chat):
+    response = openai_client.chat.completions.create(
+        model=THIS_MODEL,
+        messages=[
+            {
+                "role": "system",
+                "content": "You are a cool image analyst required for OCR."
+            },
+            {
+                "role": "user",
+                "content": [
+                    {"type": "text", "text": f"{ELECTION_INFO}\n\nPlease use the information above to answer the user chat as concise as possible. User chat: {user_chat}"},
+                ]
+            }
+        ],
+        max_tokens=300
+    )
+
+    # Extract the description
+    result = response.choices[0].message.content
+    return result
+
 
 def decode_image_to_ocr(base64_image):
     # Send the request to the OpenAI API
@@ -117,14 +147,15 @@ def upload_image():
 
     return jsonify({"message": "Image uploaded successfully!", "data": result}), 200
 
-
-
 ##### Twilio Whatsapp Webhook:
 app.route('/whatsapp_webhook', methods=['POST'])
 def whatsapp_webhook():
     #print request.data
     data = request.get_json()
     print("data:", data)
+
+    # response_message = answer_based_on_election_info(data.get('message').get('text'))
+    # send_whatsapp_message(response_message)
 
     return jsonify({"success": True}), 200
 
