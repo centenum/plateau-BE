@@ -117,5 +117,17 @@ def upload_image():
 
     return jsonify({"message": "Image uploaded successfully!", "data": result}), 200
 
+
+
+##### Twilio Whatsapp Webhook:
+app.route('/whatsapp_webhook', methods=['POST'])
+def whatsapp_webhook():
+    #print request.data
+    data = request.get_json()
+    print("data:", data)
+
+    return jsonify({"success": True}), 200
+
+
 if __name__ == '__main__':
     app.run(debug=True)
