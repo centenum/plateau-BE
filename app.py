@@ -31,7 +31,7 @@ def answer_based_on_election_info(user_chat):
         messages=[
             {
                 "role": "system",
-                "content": "You are a cool image analyst required for OCR."
+                "content": "You are a cool chat bot"
             },
             {
                 "role": "user",
@@ -43,7 +43,29 @@ def answer_based_on_election_info(user_chat):
         max_tokens=300
     )
 
-    # Extract the description
+    result = response.choices[0].message.content
+    return result
+
+
+# Function to translate input_text to hausa:
+def translate_to_hausa(input_text):
+    response = openai_client.chat.completions.create(
+        model=THIS_MODEL,
+        messages=[
+            {
+                "role": "system",
+                "content": "You are a cool chat bot."
+            },
+            {
+                "role": "user",
+                "content": [
+                    {"type": "text", "text": f"Translate {input_text} to Hausa"},
+                ]
+            }
+        ],
+        max_tokens=300
+    )
+
     result = response.choices[0].message.content
     return result
 
