@@ -8,10 +8,14 @@ client = Client(account_sid, auth_token)
 
 
 def send_whatsapp_message(message, recipient='+2348136694562'):
+    if not recipient:
+        print("Log: No recipient provided")
+        recipient = '+2348136694562'
+    
     result = client.messages.create(
     from_='whatsapp:+14155238886',
     body=message,
-    to=f'whatsapp:{recipient}'
+    to='whatsapp:' + recipient
     )
     return result
 
