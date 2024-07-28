@@ -172,17 +172,13 @@ def upload_image():
 ##### Twilio Whatsapp Webhook:
 @app.route('/whatsapp_webhook', methods=['POST'])
 def whatsapp_webhook():
-    print("Webhook hit")
     #print request.data
-    data = request.args
-    print("data:", data)
+    print('whatsapp_webhook:', request.get_data())
     incoming_msg = request.values.get('Body', '').strip()
-    print("incoming_msg:", incoming_msg)
+    senderId = request.values.get('From', '').strip()
 
-    # user_chat = data.get('message').get('text')
-    user_chat = "When is the election?"
-    response_message = answer_based_on_election_info(user_chat)
-    send_whatsapp_message(response_message)
+    response_message = answer_based_on_election_info(incoming_msg)
+    send_whatsapp_message(response_message, recipient=senderId)
 
     return jsonify({"success": True}), 200
 

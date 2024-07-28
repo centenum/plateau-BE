@@ -7,11 +7,11 @@ client = Client(account_sid, auth_token)
 
 
 
-def send_whatsapp_message(message):
+def send_whatsapp_message(message, recipient='+2348136694562'):
     result = client.messages.create(
     from_='whatsapp:+14155238886',
     body=message,
-    to='whatsapp:+2348136694562'
+    to=f'whatsapp:{recipient}'
     )
     return result
 
