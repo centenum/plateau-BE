@@ -36,7 +36,7 @@ def answer_based_on_election_info(user_chat):
             {
                 "role": "user",
                 "content": [
-                    {"type": "text", "text": f"{ELECTION_INFO}\n\nPlease use the information above to answer the user chat as concise as possible. User chat: {user_chat}"},
+                    {"type": "text", "text": f"{ELECTION_INFO}\n\nPlease use the information above to answer the user chat as concise as possible. User chat: {user_chat}.\n\nIf the user chat is not related to the election info, just return a sentence letting the user know you don't have an answer."},
                 ]
             }
         ],
