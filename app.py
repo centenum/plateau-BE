@@ -48,7 +48,7 @@ def answer_based_on_election_info(user_chat):
 
 
 # Function to translate input_text to hausa:
-def translate_to_hausa(input_text):
+def translate_text_to_hausa(input_text):
     response = openai_client.chat.completions.create(
         model=THIS_MODEL,
         messages=[
@@ -59,7 +59,7 @@ def translate_to_hausa(input_text):
             {
                 "role": "user",
                 "content": [
-                    {"type": "text", "text": f"Translate {input_text} to Hausa"},
+                    {"type": "text", "text": f"Translate {input_text} to Hausa. Just return the hausa translation."},
                 ]
             }
         ],
@@ -183,6 +183,15 @@ def whatsapp_webhook():
 
     return jsonify({"success": True}), 200
 
+##### Route to translate text to hausa:
+@app.route('/translate_to_hausa', methods=['POST'])
+def translate_to_hausa():
+    data = request.get_json()
+    input_text = data.get('text')
+
+    response = translate_text_to_hausa(input_text)
+
+    return jsonify({"text": response})
 
 if __name__ == '__main__':
     app.run(debug=True)
