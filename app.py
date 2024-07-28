@@ -172,6 +172,7 @@ def upload_image():
 ##### Twilio Whatsapp Webhook:
 @app.route('/whatsapp_webhook', methods=['POST'])
 def whatsapp_webhook():
+    print("Webhook hit")
     #print request.data
     data = request.get_json()
     print("data:", data)
