@@ -7,13 +7,13 @@ client = Client(account_sid, auth_token)
 
 
 
-def send_whatsapp_message():
-    message = client.messages.create(
+def send_whatsapp_message(message):
+    result = client.messages.create(
     from_='whatsapp:+14155238886',
-    body='Welcome. I am your assistance to guide you for Elections in Plateau.',
+    body=message,
     to='whatsapp:+2348136694562'
     )
-    return message
+    return result
 
-message = send_whatsapp_message()
-print(message.sid)
+# message = send_whatsapp_message("Hello")
+# print(message.sid)

@@ -97,7 +97,7 @@ def decode_image_to_ocr(base64_image):
 
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return "Hello world 👋"
 
 @app.route('/about')
 def about():
@@ -170,14 +170,16 @@ def upload_image():
     return jsonify({"message": "Image uploaded successfully!", "data": result}), 200
 
 ##### Twilio Whatsapp Webhook:
-app.route('/whatsapp_webhook', methods=['POST'])
+@app.route('/whatsapp_webhook', methods=['POST'])
 def whatsapp_webhook():
     #print request.data
     data = request.get_json()
     print("data:", data)
 
-    # response_message = answer_based_on_election_info(data.get('message').get('text'))
-    # send_whatsapp_message(response_message)
+    # user_chat = data.get('message').get('text')
+    user_chat = "When is the election?"
+    response_message = answer_based_on_election_info(user_chat)
+    send_whatsapp_message(response_message)
 
     return jsonify({"success": True}), 200
 
