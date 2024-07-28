@@ -174,8 +174,10 @@ def upload_image():
 def whatsapp_webhook():
     print("Webhook hit")
     #print request.data
-    data = request.get_json()
+    data = request.args
     print("data:", data)
+    incoming_msg = request.values.get('Body', '').strip()
+    print("incoming_msg:", incoming_msg)
 
     # user_chat = data.get('message').get('text')
     user_chat = "When is the election?"
