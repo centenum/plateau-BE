@@ -5,8 +5,15 @@ import io, os, base64
 from flask_cors import CORS
 from whatsapp_bot import send_whatsapp_message
 
+from routes_accreditation import accreditation_routes
+from routes_authentication import authentication_routes
+
 app = Flask(__name__)
 CORS(app)  # This will enable CORS for all routes
+
+app.register_blueprint(accreditation_routes)
+app.register_blueprint(authentication_routes)
+
 OPENAI_KEY = os.getenv("OPENAI_KEY")
 
 # Set up your OpenAI API key
