@@ -1,30 +1,55 @@
 from flask import Flask, render_template, request, jsonify
-from openai import OpenAI
-from PIL import Image
-import io, os, base64
+from flask_sqlalchemy import SQLAlchemy
+from werkzeug.security import generate_password_hash, check_password_hash
 from flask_cors import CORS
-from whatsapp_bot import send_whatsapp_message
+import os, base64
+from openai import OpenAI
+from flask_jwt_extended import JWTManager, create_access_token, jwt_required, jwt_optional, get_jwt_identity
 
 app = Flask(__name__)
-CORS(app)  # This will enable CORS for all routes
-OPENAI_KEY = os.getenv("OPENAI_KEY")
+CORS(app)  # Enable CORS for all routes
 
-# Set up your OpenAI API key
-openai_client = OpenAI(
-    # This is the default and can be omitted
-    api_key= os.getenv("OPENAI_KEY"),
-)
+# Configuration
+app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'your_secret_key')
+app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'sqlite:///site.db')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY', 'your_jwt_secret_key')
+
+db = SQLAlchemy(app)
+jwt = JWTManager(app)
+
+# OpenAI setup
+OPENAI_KEY = os.getenv("OPENAI_KEY")
+openai_client = OpenAI(api_key=OPENAI_KEY)
 THIS_MODEL = "gpt-4o-mini"
+
+# Models
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    username = db.Column(db.String(150), unique=True, nullable=False)
+    password_hash = db.Column(db.String(150), nullable=False)
+    role = db.Column(db.String(50), nullable=False, default='user')
+    is_verified = db.Column(db.Boolean, default=False)
+
+    def set_password(self, password):
+        self.password_hash = generate_password_hash(password)
+
+    def check_password(self, password):
+        return check_password_hash(self.password_hash, password)
+
+class Voter(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), nullable=False)
+    name = db.Column(db.String(150), nullable=False)
+    address = db.Column(db.String(250), nullable=False)
+    date_of_birth = db.Column(db.Date, nullable=False)
+    contact = db.Column(db.String(100), nullable=True)
+    user = db.relationship('User', backref=db.backref('voters', lazy=True))
 
 def encode_image(image_file):
     return base64.b64encode(image_file.read()).decode('utf-8')
 
-
-# Read the .txt file content
-ELECTION_INFO = ""
-with open('LLM_election_info.txt', 'r') as file:
-    ELECTION_INFO = file.read()
-
+# Functions
 def answer_based_on_election_info(user_chat):
     response = openai_client.chat.completions.create(
         model=THIS_MODEL,
@@ -46,8 +71,6 @@ def answer_based_on_election_info(user_chat):
     result = response.choices[0].message.content
     return result
 
-
-# Function to translate input_text to hausa:
 def translate_text_to_hausa(input_text):
     response = openai_client.chat.completions.create(
         model=THIS_MODEL,
@@ -69,9 +92,7 @@ def translate_text_to_hausa(input_text):
     result = response.choices[0].message.content
     return result
 
-
 def decode_image_to_ocr(base64_image):
-    # Send the request to the OpenAI API
     response = openai_client.chat.completions.create(
         model=THIS_MODEL,
         messages=[
@@ -90,11 +111,10 @@ def decode_image_to_ocr(base64_image):
         max_tokens=300
     )
 
-    # Extract the description
     description = response.choices[0].message.content
-
     return description
 
+# Routes
 @app.route('/')
 def home():
     return "Hello world 👋"
@@ -103,6 +123,77 @@ def home():
 def about():
     return 'This is the about page.'
 
+@app.route('/register', methods=['POST'])
+def register():
+    data = request.get_json()
+    username = data.get('username')
+    password = data.get('password')
+    role = data.get('role', 'user')
+
+    if not username or not password:
+        return jsonify({"error": "Username and password are required"}), 400
+
+    if User.query.filter_by(username=username).first():
+        return jsonify({"error": "Username already exists"}), 400
+
+    user = User(username=username, role=role)
+    user.set_password(password)
+    db.session.add(user)
+    db.session.commit()
+
+    return jsonify({"message": "User registered successfully"}), 201
+
+@app.route('/login', methods=['POST'])
+def login():
+    data = request.get_json()
+    username = data.get('username')
+    password = data.get('password')
+
+    user = User.query.filter_by(username=username).first()
+    if user and user.check_password(password):
+        access_token = create_access_token(identity=user.id)
+        return jsonify({"access_token": access_token}), 200
+
+    return jsonify({"error": "Invalid credentials"}), 401
+
+@app.route('/verify_user/<int:user_id>', methods=['POST'])
+@jwt_required()
+def verify_user(user_id):
+    current_user_id = get_jwt_identity()
+    current_user = User.query.get(current_user_id)
+
+    if current_user.role != 'admin':
+        return jsonify({"error": "Admin privileges required"}), 403
+
+    user = User.query.get(user_id)
+    if user:
+        user.is_verified = True
+        db.session.commit()
+        return jsonify({"message": "User verified successfully"}), 200
+
+    return jsonify({"error": "User not found"}), 404
+
+@app.route('/voter_input', methods=['POST'])
+@jwt_required()
+def voter_input():
+    data = request.get_json()
+    user_id = data.get('user_id')
+    name = data.get('name')
+    address = data.get('address')
+    date_of_birth = data.get('date_of_birth')
+    contact = data.get('contact')
+    
+    if not all([user_id, name, address, date_of_birth]):
+        return jsonify({"error": "User ID, name, address, and date of birth are required"}), 400
+    
+    user = User.query.get(user_id)
+    if user:
+        voter = Voter(user_id=user_id, name=name, address=address, date_of_birth=date_of_birth, contact=contact)
+        db.session.add(voter)
+        db.session.commit()
+        return jsonify({"message": "Voter data saved successfully"}), 200
+    
+    return jsonify({"error": "User not found"}), 404
 
 @app.route('/voters_card_ocr', methods=['POST'])
 def extract_text():
@@ -115,10 +206,8 @@ def extract_text():
         return jsonify({"error": "No selected file"}), 400
 
     try:
-        # Encode the image file as base64
         base64_image = encode_image(file.stream)
 
-        # Send the request to the OpenAI API
         response = openai_client.chat.completions.create(
             model=THIS_MODEL,
             messages=[
@@ -137,7 +226,6 @@ def extract_text():
             max_tokens=300
         )
 
-        # Extract the description
         description = response.choices[0].message.content
 
         return jsonify({"description": description})
@@ -151,7 +239,6 @@ def upload_image():
     image_data = image_data.split(",")[1]  # Remove the data URL prefix
     image_data = base64.b64decode(image_data)
 
-    # Encode the decoded image back to base64 for the OCR function
     base64_image = base64.b64encode(image_data).decode('utf-8')
     result = decode_image_to_ocr(base64_image)
     print("Result:", result, type(result))
@@ -169,10 +256,8 @@ def upload_image():
 
     return jsonify({"message": "Image uploaded successfully!", "data": result}), 200
 
-##### Twilio Whatsapp Webhook:
 @app.route('/whatsapp_webhook', methods=['POST'])
 def whatsapp_webhook():
-    #print request.data
     print('whatsapp_webhook:', request.get_data())
     incoming_msg = request.values.get('Body', '').strip()
     senderId = request.values.get('From', '').strip()
@@ -182,7 +267,6 @@ def whatsapp_webhook():
 
     return jsonify({"success": True}), 200
 
-##### Route to translate text to hausa:
 @app.route('/translate_to_hausa', methods=['POST'])
 def translate_to_hausa():
     data = request.get_json()
@@ -193,4 +277,5 @@ def translate_to_hausa():
     return jsonify({"text": response})
 
 if __name__ == '__main__':
+    db.create_all()
     app.run(debug=True)
