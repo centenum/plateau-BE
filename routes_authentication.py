@@ -4,7 +4,7 @@ from config import db, SENDCHAMP_PUBLIC_KEY
 import string, random, uuid
 from datetime import datetime, timedelta, timezone
 import bcrypt, requests
-from flasgger import Swagger, swag_from
+from flasgger import swag_from
 
 routes_authentication = Blueprint('authentication_routes', __name__)
 

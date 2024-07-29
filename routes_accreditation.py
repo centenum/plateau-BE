@@ -2,7 +2,7 @@ from flask import Blueprint, request, jsonify
 from config import db
 import uuid
 from datetime import datetime, timezone
-from flasgger import Swagger, swag_from
+from flasgger import swag_from
 
 routes_accreditation = Blueprint('accreditation_routes', __name__)
 

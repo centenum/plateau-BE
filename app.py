@@ -4,16 +4,17 @@ from PIL import Image
 import io, os, base64
 from flask_cors import CORS
 from whatsapp_bot import send_whatsapp_message
+from flasgger import Swagger
 
-from routes_accreditation import accreditation_routes
-from routes_authentication import authentication_routes
+from routes_accreditation import routes_accreditation
+from routes_authentication import routes_authentication
 
 app = Flask(__name__)
 CORS(app)  # This will enable CORS for all routes
 swagger = Swagger(app)
 
-app.register_blueprint(accreditation_routes)
-app.register_blueprint(authentication_routes)
+app.register_blueprint(routes_accreditation)
+app.register_blueprint(routes_authentication)
 
 OPENAI_KEY = os.getenv("OPENAI_KEY")
 
