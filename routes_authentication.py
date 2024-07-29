@@ -3,6 +3,7 @@ from config import db
 
 import string, random, uuid
 from datetime import datetime, timedelta
+import bcrypt
 
 routes_authentication = Blueprint('authentication_routes', __name__)
 
@@ -25,14 +26,19 @@ def register_user():
     data = request.get_json()
     first_name = data.get('firstName')
     last_name = data.get('lastName')
+    email = data.get('email')
     role = data.get('role', 'APO')  # Default role is APO if not specified
     password = generate_password()
     created_at = datetime.utcnow()
 
+    # Hash the password with bcrypt
+    hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
+
     user = {
         'firstName': first_name,
         'lastName': last_name,
-        'password': password,
+        'email': email,
+        'password': hashed_password,
         'createdAt': created_at,
         'role': role
     }
@@ -44,21 +50,25 @@ def register_user():
 @routes_authentication.route('/login', methods=['POST'])
 def login():
     data = request.get_json()
-    first_name = data.get('firstName')
-    last_name = data.get('lastName')
-    role = data.get('role')
-    phone_number = data.get('phoneNumber')  # Assuming phone number is provided for OTP
+    email = data.get('email')
+    password = data.get('password')
 
-    user = users_collection.find_one({'firstName': first_name, 'lastName': last_name, 'role': role})
+    user = users_collection.find_one({'email': email})
     
-    if user:
-        otp = ''.join(random.choice(string.digits) for _ in range(6))
-        sendChamp.send_sms(phone_number, otp)  # Send OTP via sendChamp
-
-        users_collection.update_one({'_id': user['_id']}, {'$set': {'otp': otp}})
-        return jsonify({'message': 'OTP sent successfully'}), 200
+    if user and bcrypt.checkpw(password.encode('utf-8'), user['password']):
+        # Generate token and store in auth collection
+        token = generate_token()
+        token_expiry = datetime.utcnow() + timedelta(hours=1)  # Token valid for 1 hour
+        auth_record = {
+            'user_id': user['_id'],
+            'token': token,
+            'expiry': token_expiry,
+            'is_active': True
+        }
+        auth_collection.insert_one(auth_record)
+        return jsonify({'message': 'Login successful', 'token': token}), 200
     else:
-        return jsonify({'message': 'User not found'}), 404
+        return jsonify({'message': 'Invalid email or password'}), 401
     
 # Endpoint to verify OTP and login
 @routes_authentication.route('/verify-otp', methods=['POST'])
