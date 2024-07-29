@@ -1,5 +1,4 @@
 from flask import Flask, render_template, request, jsonify
-from flask_sqlalchemy import SQLAlchemy
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_cors import CORS
 import os, base64
@@ -15,7 +14,6 @@ app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'sqlite:///sit
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY', 'your_jwt_secret_key')
 
-db = SQLAlchemy(app)
 jwt = JWTManager(app)
 
 # OpenAI setup
@@ -279,3 +277,23 @@ def translate_to_hausa():
 if __name__ == '__main__':
     db.create_all()
     app.run(debug=True)
+
+User Schema collection
+id: Integer, Primary Key
+username: String(150), Unique, Not Null
+password_hash: String(150), Not Null
+role: String(50), Default 'user'
+is_verified: Boolean, Default False
+
+User registration 
+User login
+
+Voter Schema collection
+id: Integer, Primary Key
+user_id: Integer, Foreign Key (references User.id), Not Null
+name: String(150), Not Null
+address: String(250), Not Null
+date_of_birth: Date, Not Null
+contact: String(100), Optional
+
+Voter input
