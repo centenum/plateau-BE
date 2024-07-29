@@ -277,7 +277,7 @@ def translate_to_hausa():
 if __name__ == '__main__':
     db.create_all()
     app.run(debug=True)
-
+"""
 User Schema collection
 id: Integer, Primary Key
 username: String(150), Unique, Not Null
@@ -296,4 +296,17 @@ address: String(250), Not Null
 date_of_birth: Date, Not Null
 contact: String(100), Optional
 
-Voter input
+Voter input is the data - data = request.get_json()
+user_id = data.get('user_id')
+name = data.get('name')
+address = data.get('address')
+date_of_birth = data.get('date_of_birth')
+contact = data.get('contact')
+polling_unit = data.get('polling_unit')
+
+verify_voter is the data -  data = request.get_json()
+    voter_id = data.get('voter_id')
+    user_id = data.get('user_id')
+   
+
+"""
