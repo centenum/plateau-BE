@@ -4,3 +4,5 @@ flask_cors
 gunicorn
 pillow
 twilio
+flasgger
+bcrypt
