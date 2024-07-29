@@ -4,6 +4,7 @@ from config import db, SENDCHAMP_PUBLIC_KEY
 import string, random, uuid
 from datetime import datetime, timedelta, timezone
 import bcrypt, requests
+from flasgger import Swagger, swag_from
 
 routes_authentication = Blueprint('authentication_routes', __name__)
 
@@ -50,6 +51,37 @@ def send_champ_otp(phone_number, first_name):
 
 # Endpoint to register users (APO or PO)
 @routes_authentication.route('/register', methods=['POST'])
+@swag_from({
+    'parameters': [
+        {
+            'name': 'body',
+            'in': 'body',
+            'required': True,
+            'schema': {
+                'type': 'object',
+                'properties': {
+                    'firstName': {'type': 'string'},
+                    'lastName': {'type': 'string'},
+                    'email': {'type': 'string'},
+                    'phoneNumber': {'type': 'string'},
+                    'role': {'type': 'string', 'enum': ['APO', 'PO']}
+                },
+                'required': ['firstName', 'lastName', 'email', 'phoneNumber']
+            }
+        }
+    ],
+    'responses': {
+        201: {
+            'description': 'User registered successfully',
+            'examples': {
+                'application/json': {
+                    'message': 'User registered successfully',
+                    'password': 'generated-password'
+                }
+            }
+        }
+    }
+})
 def register_user():
     data = request.get_json()
     first_name = data.get('firstName')
@@ -76,6 +108,41 @@ def register_user():
 
 # Endpoint for user login
 @routes_authentication.route('/login', methods=['POST'])
+@swag_from({
+    'parameters': [
+        {
+            'name': 'body',
+            'in': 'body',
+            'required': True,
+            'schema': {
+                'type': 'object',
+                'properties': {
+                    'email': {'type': 'string'},
+                    'password': {'type': 'string'}
+                },
+                'required': ['email', 'password']
+            }
+        }
+    ],
+    'responses': {
+        200: {
+            'description': 'OTP sent successfully',
+            'examples': {
+                'application/json': {
+                    'message': 'OTP sent successfully'
+                }
+            }
+        },
+        401: {
+            'description': 'Invalid email or password',
+            'examples': {
+                'application/json': {
+                    'message': 'Invalid email or password'
+                }
+            }
+        }
+    }
+})
 def login():
     data = request.get_json()
     email = data.get('email')
@@ -108,6 +175,42 @@ def login():
     
 # Endpoint to verify OTP and generate login token
 @routes_authentication.route('/verify-otp', methods=['POST'])
+@swag_from({
+    'parameters': [
+        {
+            'name': 'body',
+            'in': 'body',
+            'required': True,
+            'schema': {
+                'type': 'object',
+                'properties': {
+                    'email': {'type': 'string'},
+                    'otp': {'type': 'string'}
+                },
+                'required': ['email', 'otp']
+            }
+        }
+    ],
+    'responses': {
+        200: {
+            'description': 'Login successful',
+            'examples': {
+                'application/json': {
+                    'message': 'Login successful',
+                    'token': 'generated-token'
+                }
+            }
+        },
+        400: {
+            'description': 'Invalid OTP',
+            'examples': {
+                'application/json': {
+                    'message': 'Invalid OTP'
+                }
+            }
+        }
+    }
+})
 def verify_otp():
     data = request.get_json()
     email = data.get('email')
@@ -136,6 +239,35 @@ def verify_otp():
 
 # Endpoint for user logout
 @routes_authentication.route('/logout', methods=['POST'])
+@swag_from({
+    'parameters': [
+        {
+            'name': 'Authorization',
+            'in': 'header',
+            'type': 'string',
+            'required': True,
+            'description': 'Bearer token'
+        }
+    ],
+    'responses': {
+        200: {
+            'description': 'Logout successful',
+            'examples': {
+                'application/json': {
+                    'message': 'Logout successful'
+                }
+            }
+        },
+        400: {
+            'description': 'Invalid or expired token',
+            'examples': {
+                'application/json': {
+                    'message': 'Invalid or expired token'
+                }
+            }
+        }
+    }
+})
 def logout():
     token = request.headers.get('Authorization')
 

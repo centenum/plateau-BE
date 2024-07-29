@@ -10,6 +10,7 @@ from routes_authentication import authentication_routes
 
 app = Flask(__name__)
 CORS(app)  # This will enable CORS for all routes
+swagger = Swagger(app)
 
 app.register_blueprint(accreditation_routes)
 app.register_blueprint(authentication_routes)

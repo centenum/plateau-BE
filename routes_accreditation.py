@@ -2,6 +2,7 @@ from flask import Blueprint, request, jsonify
 from config import db
 import uuid
 from datetime import datetime, timezone
+from flasgger import Swagger, swag_from
 
 routes_accreditation = Blueprint('accreditation_routes', __name__)
 
@@ -14,6 +15,19 @@ def generate_session_id():
 
 # Auto Accreditation: 3 steps
 @routes_accreditation.route('/auto-accreditation/start', methods=['POST'])
+@swag_from({
+    'responses': {
+        201: {
+            'description': 'Auto accreditation started',
+            'examples': {
+                'application/json': {
+                    'message': 'Auto accreditation started',
+                    'sessionId': 'unique-session-id'
+                }
+            }
+        }
+    }
+})
 def start_auto_accreditation():
     session_id = generate_session_id()
     accreditation_collection.insert_one({
@@ -25,6 +39,35 @@ def start_auto_accreditation():
     return jsonify({'message': 'Auto accreditation started', 'sessionId': session_id}), 201
 
 @routes_accreditation.route('/auto-accreditation/step1', methods=['POST'])
+@swag_from({
+    'parameters': [
+        {
+            'name': 'sessionId',
+            'in': 'body',
+            'type': 'string',
+            'required': True,
+            'description': 'Session ID'
+        },
+        {
+            'name': 'voterCardImage',
+            'in': 'body',
+            'type': 'string',
+            'required': True,
+            'description': 'Voter Card Image'
+        }
+    ],
+    'responses': {
+        200: {
+            'description': 'Voter\'s card verified, proceed to face verification',
+            'examples': {
+                'application/json': {
+                    'message': 'Voter\'s card verified, proceed to face verification',
+                    'sessionId': 'unique-session-id'
+                }
+            }
+        }
+    }
+})
 def auto_accreditation_step1():
     data = request.get_json()
     session_id = data.get('sessionId')
@@ -36,6 +79,35 @@ def auto_accreditation_step1():
     return jsonify({'message': 'Voter\'s card verified, proceed to face verification', 'sessionId': session_id}), 200
 
 @routes_accreditation.route('/auto-accreditation/step2', methods=['POST'])
+@swag_from({
+    'parameters': [
+        {
+            'name': 'sessionId',
+            'in': 'body',
+            'type': 'string',
+            'required': True,
+            'description': 'Session ID'
+        },
+        {
+            'name': 'faceCaptureImage',
+            'in': 'body',
+            'type': 'string',
+            'required': True,
+            'description': 'Face Capture Image'
+        }
+    ],
+    'responses': {
+        200: {
+            'description': 'Face verified, proceed to polling unit verification',
+            'examples': {
+                'application/json': {
+                    'message': 'Face verified, proceed to polling unit verification',
+                    'sessionId': 'unique-session-id'
+                }
+            }
+        }
+    }
+})
 def auto_accreditation_step2():
     data = request.get_json()
     session_id = data.get('sessionId')
@@ -47,6 +119,35 @@ def auto_accreditation_step2():
     return jsonify({'message': 'Face verified, proceed to polling unit verification', 'sessionId': session_id}), 200
 
 @routes_accreditation.route('/auto-accreditation/step3', methods=['POST'])
+@swag_from({
+    'parameters': [
+        {
+            'name': 'sessionId',
+            'in': 'body',
+            'type': 'string',
+            'required': True,
+            'description': 'Session ID'
+        },
+        {
+            'name': 'pollingUnit',
+            'in': 'body',
+            'type': 'string',
+            'required': True,
+            'description': 'Polling Unit'
+        }
+    ],
+    'responses': {
+        200: {
+            'description': 'Voter accredited successfully',
+            'examples': {
+                'application/json': {
+                    'message': 'Voter accredited successfully',
+                    'sessionId': 'unique-session-id'
+                }
+            }
+        }
+    }
+})
 def auto_accreditation_step3():
     data = request.get_json()
     session_id = data.get('sessionId')
@@ -69,6 +170,40 @@ def auto_accreditation_step3():
 
 # Manual Accreditation: 2 steps
 @routes_accreditation.route('/manual-accreditation/step1', methods=['POST'])
+@swag_from({
+    'parameters': [
+        {
+            'name': 'vin',
+            'in': 'body',
+            'type': 'string',
+            'required': True,
+            'description': 'Voter Identification Number (VIN)'
+        }
+    ],
+    'responses': {
+        200: {
+            'description': 'VIN valid',
+            'examples': {
+                'application/json': {
+                    'message': 'VIN valid',
+                    'voterDetails': {
+                        'firstName': 'John',
+                        'lastName': 'Doe',
+                        'pollingUnit': 'Unit 1'
+                    }
+                }
+            }
+        },
+        400: {
+            'description': 'Invalid VIN',
+            'examples': {
+                'application/json': {
+                    'message': 'Invalid VIN'
+                }
+            }
+        }
+    }
+})
 def manual_accreditation_step1():
     data = request.get_json()
     vin = data.get('vin')
@@ -93,5 +228,57 @@ def verify_vin(vin):
     return mock_voter if vin == 'valid_vin' else None
 
 @routes_accreditation.route('/manual-accreditation/step2', methods=['POST'])
+@swag_from({
+    'parameters': [
+        {
+            'name': 'vin',
+            'in': 'body',
+            'type': 'string',
+            'required': True,
+            'description': 'Voter Identification Number (VIN)'
+        },
+        {
+            'name': 'voterCardImage',
+            'in': 'body',
+            'type': 'string',
+            'required': True,
+            'description': 'Voter Card Image'
+        },
+        {
+            'name': 'faceCaptureImage',
+            'in': 'body',
+            'type': 'string',
+            'required': True,
+            'description': 'Face Capture Image'
+        }
+    ],
+    'responses': {
+        201: {
+            'description': 'Voter accredited successfully',
+            'examples': {
+                'application/json': {
+                    'message': 'Voter accredited successfully'
+                }
+            }
+        }
+    }
+})
 def manual_accreditation_step2():
     data = request.get_json()
+    vin = data.get('vin')
+    voter_card_image = data.get('voterCardImage')
+    face_capture_image = data.get('faceCaptureImage')
+
+    # Save the voter's face and card images
+    voter_details = {
+        'vin': vin,
+        'voterCardImage': voter_card_image,
+        'faceCaptureImage': face_capture_image,
+        'accreditedAt': datetime.now(timezone.utc)
+    }
+    
+    accreditation_collection.insert_one({
+        'status': 'completed',
+        'voterDetails': voter_details
+    })
+    return jsonify({'message': 'Voter accredited successfully'}), 201
