@@ -127,13 +127,6 @@ def auto_accreditation_step2():
             'type': 'string',
             'required': True,
             'description': 'Session ID'
-        },
-        {
-            'name': 'pollingUnit',
-            'in': 'body',
-            'type': 'string',
-            'required': True,
-            'description': 'Polling Unit'
         }
     ],
     'responses': {
@@ -151,7 +144,6 @@ def auto_accreditation_step2():
 def auto_accreditation_step3():
     data = request.get_json()
     session_id = data.get('sessionId')
-    polling_unit = data.get('pollingUnit')
     
     # Verify polling unit logic here
     
@@ -160,7 +152,6 @@ def auto_accreditation_step3():
     voter_details = {
         'voterCardImage': accreditation_record.get('voterCardImage'),
         'faceCaptureImage': accreditation_record.get('faceCaptureImage'),
-        'pollingUnit': polling_unit,
         'accreditedAt': datetime.now(timezone.utc)
     }
     
