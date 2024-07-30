@@ -64,6 +64,7 @@ def send_champ_otp(phone_number, first_name):
                     'lastName': {'type': 'string'},
                     'email': {'type': 'string'},
                     'phoneNumber': {'type': 'string'},
+                    'username': {'type': 'string'},
                     'role': {'type': 'string', 'enum': ['APO', 'PO']}
                 },
                 'required': ['firstName', 'lastName', 'email', 'phoneNumber']
@@ -88,8 +89,13 @@ def register_user():
     last_name = data.get('lastName')
     email = data.get('email')
     role = data.get('role', 'APO')  # Default role is APO if not specified
+    username = data.get('username')
     password = generate_password()
     created_at = datetime.now(timezone.utc)
+
+    # Check if the username or email already exists
+    if users_collection.count_documents({'$or': [{'username': username}, {'email': email}]}):
+        return jsonify({'message': 'Username or email already exists'}), 400
 
     # Hash the password with bcrypt
     hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
@@ -129,7 +135,8 @@ def register_user():
             'description': 'OTP sent successfully',
             'examples': {
                 'application/json': {
-                    'message': 'OTP sent successfully'
+                    'message': 'OTP sent successfully',
+                    'token': 'generated-token'
                 }
             }
         },
