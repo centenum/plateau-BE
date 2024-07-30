@@ -145,12 +145,12 @@ def register_user():
 })
 def login():
     data = request.get_json()
-    email = data.get('email')
+    username = data.get('username')
     password = data.get('password')
 
-    user = users_collection.find_one({'email': email})
+    user = users_collection.find_one({'username': username})
     
-    if user and bcrypt.checkpw(password.encode('utf-8'), user['password']):
+    if user and bcrypt.checkpw(password.encode('utf-8'), user['password'].encode('utf-8')):
         # Generate token and store in auth collection
         token = generate_token()
         token_expiry = datetime.now(timezone.utc) + timedelta(hours=1)  # Token valid for 1 hour
@@ -163,7 +163,7 @@ def login():
         auth_collection.insert_one(auth_record)
 
         # Send OTP via sendChamp
-        phone_number = user['phoneNumber']
+        phone_number = user.get('phoneNumber')
         first_name = user['firstName']
         reference, otp = send_champ_otp(phone_number, first_name)
 
