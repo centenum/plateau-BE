@@ -45,7 +45,30 @@ def send_champ_otp(phone_number, first_name):
     else:
         raise Exception('Failed to send OTP')
     
+def verify_sendchamp_otp(user, verification_code):
+    verification_reference = user.get('otp_reference')  # Assuming this is stored in the user dict
 
+    request_data = {
+        'verification_code': verification_code,
+        'verification_reference': verification_reference
+    }
+    request_headers = {
+        'Accept': 'application/json',
+        'Content-Type': 'application/json',
+        'Authorization': f'Bearer {SENDCHAMP_PUBLIC_KEY}'
+    }
+
+    try:
+        response = requests.post(
+            'https://api.sendchamp.com/api/v1/verification/confirm',
+            json=request_data,
+            headers=request_headers
+        )
+        response.raise_for_status()
+        return True
+    except requests.exceptions.RequestException as err:
+        print(f"Error verifying OTP: {err}")
+        return False
 
 
 
@@ -156,29 +179,31 @@ def login():
     password = data.get('password')
 
     user = users_collection.find_one({'username': username})
+    if not user:
+        return jsonify({'message': 'Invalid username'}), 401
     
-    if user and bcrypt.checkpw(password.encode('utf-8'), user['password'].encode('utf-8')):
-        # Generate token and store in auth collection
-        token = generate_token()
-        token_expiry = datetime.now(timezone.utc) + timedelta(hours=1)  # Token valid for 1 hour
-        auth_record = {
-            'user_id': user['_id'],
-            'token': token,
-            'expiry': token_expiry,
-            'is_active': True
-        }
-        auth_collection.insert_one(auth_record)
+    if not bcrypt.checkpw(password.encode('utf-8'), user['password'].encode('utf-8')):
+        return jsonify({'message': 'Invalid password'}), 401
+        
+    # Generate token and store in auth collection
+    token = generate_token()
+    token_expiry = datetime.now(timezone.utc) + timedelta(hours=1)  # Token valid for 1 hour
+    auth_record = {
+        'user_id': user['_id'],
+        'token': token,
+        'expiry': token_expiry,
+        'is_active': True
+    }
+    auth_collection.insert_one(auth_record)
 
-        # Send OTP via sendChamp
-        phone_number = user.get('phoneNumber')
-        first_name = user['firstName']
-        reference, otp = send_champ_otp(phone_number, first_name)
+    # Send OTP via sendChamp
+    phone_number = user.get('phoneNumber')
+    first_name = user['firstName']
+    reference, otp = send_champ_otp(phone_number, first_name)
 
-        users_collection.update_one({'_id': user['_id']}, {'$set': {'otp': otp, 'otp_reference': reference}})
+    users_collection.update_one({'_id': user['_id']}, {'$set': {'otp': otp, 'otp_reference': reference}})
 
-        return jsonify({'message': 'Login successful', 'token': token}), 200
-    else:
-        return jsonify({'message': 'Invalid email or password'}), 401
+    return jsonify({'message': 'Login successful', 'token': token}), 200
     
 # Endpoint to verify OTP and generate login token
 @routes_authentication.route('/verify-otp', methods=['POST'])
@@ -191,7 +216,7 @@ def login():
             'schema': {
                 'type': 'object',
                 'properties': {
-                    'email': {'type': 'string'},
+                    'username': {'type': 'string'},
                     'otp': {'type': 'string'}
                 },
                 'required': ['email', 'otp']
@@ -220,12 +245,19 @@ def login():
 })
 def verify_otp():
     data = request.get_json()
-    email = data.get('email')
+    username = data.get('username')
     otp = data.get('otp')
 
-    user = users_collection.find_one({'email': email})
+    user = users_collection.find_one({'username': username})
+    if not user:
+        return jsonify({'message': 'Invalid username'}), 400
     
-    if user and user.get('otp') == otp:
+    if not user.get('otp'):
+        return jsonify({'message': 'OTP not sent'}), 400
+
+    otp_verified =verify_sendchamp_otp(user, otp) # returns True or False
+    
+    if otp_verified:
         # Generate token and store in auth collection
         token = generate_token()
         token_expiry = datetime.now(timezone.utc) + timedelta(hours=1)  # Token valid for 1 hour
