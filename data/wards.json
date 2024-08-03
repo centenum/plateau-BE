@@ -1,0 +1,1810 @@
+[
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BARKIN LADI",
+        "LGA CODE": "01",
+        "WARD NAME": "TAKOK/KWOK",
+        "WARD CODE": "BLD /01"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BARKIN LADI",
+        "LGA CODE": "01",
+        "WARD NAME": "GAFAT",
+        "WARD CODE": "GAFAT"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BARKIN LADI",
+        "LGA CODE": "01",
+        "WARD NAME": "GASSA",
+        "WARD CODE": "BLD /03"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BARKIN LADI",
+        "LGA CODE": "01",
+        "WARD NAME": "GINDIN AKWATI",
+        "WARD CODE": "BLD /004"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BARKIN LADI",
+        "LGA CODE": "01",
+        "WARD NAME": "HEIPANG",
+        "WARD CODE": "BLD /05"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BARKIN LADI",
+        "LGA CODE": "01",
+        "WARD NAME": "KAKURUK",
+        "WARD CODE": "BLD /06"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BARKIN LADI",
+        "LGA CODE": "01",
+        "WARD NAME": "KAMANG/NAFOK",
+        "WARD CODE": "BLD /07"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BARKIN LADI",
+        "LGA CODE": "01",
+        "WARD NAME": "KAPWEN/KET",
+        "WARD CODE": "BLD /08"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BARKIN LADI",
+        "LGA CODE": "01",
+        "WARD NAME": "KAPWIS",
+        "WARD CODE": "BLD /09"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BARKIN LADI",
+        "LGA CODE": "01",
+        "WARD NAME": "KURA FALLS",
+        "WARD CODE": "BLD /010"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BARKIN LADI",
+        "LGA CODE": "01",
+        "WARD NAME": "LOBIRING",
+        "WARD CODE": "BLD /011"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BARKIN LADI",
+        "LGA CODE": "01",
+        "WARD NAME": "MAZAT",
+        "WARD CODE": "BLD /012"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BARKIN LADI",
+        "LGA CODE": "01",
+        "WARD NAME": "MARIT",
+        "WARD CODE": "BLD /013"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BARKIN LADI",
+        "LGA CODE": "01",
+        "WARD NAME": "PWOMOL/CHIT",
+        "WARD CODE": "BLD /014"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BARKIN LADI",
+        "LGA CODE": "01",
+        "WARD NAME": "RAFAN",
+        "WARD CODE": "BLD /015"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BARKIN LADI",
+        "LGA CODE": "01",
+        "WARD NAME": "RAKWOK/GWOL",
+        "WARD CODE": "BLD /016"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BARKIN LADI",
+        "LGA CODE": "01",
+        "WARD NAME": "SHO",
+        "WARD CODE": "BLD /017"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BARKIN LADI",
+        "LGA CODE": "01",
+        "WARD NAME": "TAFAN/NWOK \u2018A\u2019",
+        "WARD CODE": "BLD /018"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BARKIN LADI",
+        "LGA CODE": "01",
+        "WARD NAME": "TAFAN/NWOK \u2018B\u2019",
+        "WARD CODE": "BLD /019"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BASSA L.G.A",
+        "LGA CODE": "02",
+        "WARD NAME": "ZABOT",
+        "WARD CODE": "BLD /020"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BASSA",
+        "LGA CODE": "02",
+        "WARD NAME": "ASAK",
+        "WARD CODE": "BSA/001"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BASSA",
+        "LGA CODE": "02",
+        "WARD NAME": "BAKIN KOGI",
+        "WARD CODE": "BSA/002"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BASSA",
+        "LGA CODE": "02",
+        "WARD NAME": "BUJI",
+        "WARD CODE": "BSA/003"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BASSA",
+        "LGA CODE": "02",
+        "WARD NAME": "BUHIT",
+        "WARD CODE": "BSA/004"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BASSA",
+        "LGA CODE": "02",
+        "WARD NAME": "DANMANGU/ZODU",
+        "WARD CODE": "BSA/005"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BASSA",
+        "LGA CODE": "02",
+        "WARD NAME": "GABIA",
+        "WARD CODE": "BSA/006"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BASSA",
+        "LGA CODE": "02",
+        "WARD NAME": "GURRUM 'A'",
+        "WARD CODE": "BSA/007"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BASSA",
+        "LGA CODE": "02",
+        "WARD NAME": "GURRUM \u2018B\u2019",
+        "WARD CODE": "BSA/008"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BASSA",
+        "LGA CODE": "02",
+        "WARD NAME": "JENGRE",
+        "WARD CODE": "BSA/009"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BASSA",
+        "LGA CODE": "02",
+        "WARD NAME": "KADAMO",
+        "WARD CODE": "BSA/010"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BASSA",
+        "LGA CODE": "02",
+        "WARD NAME": "KAKKEK",
+        "WARD CODE": "BSA/011"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BASSA",
+        "LGA CODE": "02",
+        "WARD NAME": "KASURU",
+        "WARD CODE": "BSA/012"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BASSA",
+        "LGA CODE": "02",
+        "WARD NAME": "KIMAKPA",
+        "WARD CODE": "BSA/013"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BASSA",
+        "LGA CODE": "02",
+        "WARD NAME": "KISHIKA",
+        "WARD CODE": "BSA/014"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BASSA",
+        "LGA CODE": "02",
+        "WARD NAME": "MAFARA",
+        "WARD CODE": "BSA/015"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BASSA",
+        "LGA CODE": "02",
+        "WARD NAME": "RIMI",
+        "WARD CODE": "BSA/016"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BASSA",
+        "LGA CODE": "02",
+        "WARD NAME": "TA\u2019AGBE",
+        "WARD CODE": "BSA/017"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BASSA",
+        "LGA CODE": "02",
+        "WARD NAME": "TAHU",
+        "WARD CODE": "BSA/018"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BASSA",
+        "LGA CODE": "02",
+        "WARD NAME": "ZABOLO",
+        "WARD CODE": "BSA/019"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BASSA",
+        "LGA CODE": "02",
+        "WARD NAME": "ZOBWO",
+        "WARD CODE": "BSA/020"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BOKKOS",
+        "LGA CODE": "-03",
+        "WARD NAME": "AMBUL/BARGESH",
+        "WARD CODE": "- BKK/001"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BOKKOS",
+        "LGA CODE": "-03",
+        "WARD NAME": "BOKKOS CENTRAL",
+        "WARD CODE": "- BKK/002"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BOKKOS",
+        "LGA CODE": "-03",
+        "WARD NAME": "BOKKOS WEST",
+        "WARD CODE": "- BKK/003"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BOKKOS",
+        "LGA CODE": "-03",
+        "WARD NAME": "BUTURA",
+        "WARD CODE": "- BKK/004"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BOKKOS",
+        "LGA CODE": "-03",
+        "WARD NAME": "DAFFO",
+        "WARD CODE": "- BKK/005"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BOKKOS",
+        "LGA CODE": "-03",
+        "WARD NAME": "GWANDE KARFA",
+        "WARD CODE": "- BKK/006"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BOKKOS",
+        "LGA CODE": "-03",
+        "WARD NAME": "HOROP",
+        "WARD CODE": "- BKK/007"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BOKKOS",
+        "LGA CODE": "-03",
+        "WARD NAME": "KAMWAI",
+        "WARD CODE": "- BKK/008"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BOKKOS",
+        "LGA CODE": "-03",
+        "WARD NAME": "KWATAS",
+        "WARD CODE": "- BKK/009"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BOKKOS    CODE-03",
+        "LGA CODE": "BOKKOS    CODE-03",
+        "WARD NAME": "MANGOR                         CODE-010",
+        "WARD CODE": "MANGOR                         CODE-010"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BOKKOS",
+        "LGA CODE": "-03",
+        "WARD NAME": "MANDAR",
+        "WARD CODE": "-011"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BOKKOS",
+        "LGA CODE": "-03",
+        "WARD NAME": "MARGIF/KOPMUR",
+        "WARD CODE": "-013"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BOKKOS",
+        "LGA CODE": "-03",
+        "WARD NAME": "MBAR/MANGAR",
+        "WARD CODE": "-014"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BOKKOS",
+        "LGA CODE": "-03",
+        "WARD NAME": "MUSHERE NORTH",
+        "WARD CODE": "-015"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BOKKOS",
+        "LGA CODE": "-03",
+        "WARD NAME": "MUSHERE CENTRAL",
+        "WARD CODE": "-016"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BOKKOS",
+        "LGA CODE": "-03",
+        "WARD NAME": "RICHA",
+        "WARD CODE": "-017"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BOKKOS",
+        "LGA CODE": "-03",
+        "WARD NAME": "SHA",
+        "WARD CODE": "-018"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "BOKKOS",
+        "LGA CODE": "-03",
+        "WARD NAME": "TANGUR",
+        "WARD CODE": "-019"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS EAST L.G.A",
+        "LGA CODE": "04",
+        "WARD NAME": "TOFF",
+        "WARD CODE": "-020"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS EAST",
+        "LGA CODE": "04",
+        "WARD NAME": "FEDERE",
+        "WARD CODE": "001"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS EAST",
+        "LGA CODE": "04",
+        "WARD NAME": "FOBUR 'A'",
+        "WARD CODE": "002"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS EAST",
+        "LGA CODE": "04",
+        "WARD NAME": "FOBUR 'B'",
+        "WARD CODE": "003"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS EAST",
+        "LGA CODE": "04",
+        "WARD NAME": "FOBUR 'B' WEST",
+        "WARD CODE": "004"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS EAST",
+        "LGA CODE": "04",
+        "WARD NAME": "FOBUR CENTRAL",
+        "WARD CODE": "005"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS EAST",
+        "LGA CODE": "04",
+        "WARD NAME": "FOBUR EAST",
+        "WARD CODE": "006"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS EAST",
+        "LGA CODE": "04",
+        "WARD NAME": "FURSUM",
+        "WARD CODE": "007"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS EAST",
+        "LGA CODE": "04",
+        "WARD NAME": "GODONG",
+        "WARD CODE": "008"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS EAST",
+        "LGA CODE": "04",
+        "WARD NAME": "JARAWAN KOGI 'A'",
+        "WARD CODE": "009"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS EAST",
+        "LGA CODE": "04",
+        "WARD NAME": "JARAWAN KOGI 'B'",
+        "WARD CODE": "010"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS EAST",
+        "LGA CODE": "04",
+        "WARD NAME": "MAIGEMU",
+        "WARD CODE": "011"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS EAST",
+        "LGA CODE": "04",
+        "WARD NAME": "MAIJUJU",
+        "WARD CODE": "012"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS EAST",
+        "LGA CODE": "04",
+        "WARD NAME": "NAKWANG/DORONG",
+        "WARD CODE": "013"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS EAST",
+        "LGA CODE": "04",
+        "WARD NAME": "SHERE CENTRAL",
+        "WARD CODE": "014"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS EAST",
+        "LGA CODE": "04",
+        "WARD NAME": "SHERE EAST",
+        "WARD CODE": "015"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS EAST",
+        "LGA CODE": "04",
+        "WARD NAME": "SHERE WEST",
+        "WARD CODE": "016"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS EAST",
+        "LGA CODE": "04",
+        "WARD NAME": "TERE-NITSENG",
+        "WARD CODE": "017"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS EAST",
+        "LGA CODE": "04",
+        "WARD NAME": "NATION/FUSA",
+        "WARD CODE": "018"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS EAST",
+        "LGA CODE": "04",
+        "WARD NAME": "ZANDI",
+        "WARD CODE": "019"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS NORTH",
+        "LGA CODE": "05",
+        "WARD NAME": "ABBA NA SHEHU",
+        "WARD CODE": "JJN/001"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS NORTH",
+        "LGA CODE": "05",
+        "WARD NAME": "AHWOL",
+        "WARD CODE": "JJN/002"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS NORTH",
+        "LGA CODE": "05",
+        "WARD NAME": "ALI KAZAURE",
+        "WARD CODE": "JJN/003"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS NORTH",
+        "LGA CODE": "05",
+        "WARD NAME": "AMANZAH",
+        "WARD CODE": "JJN/004"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS NORTH",
+        "LGA CODE": "05",
+        "WARD NAME": "GARBA DAHO",
+        "WARD CODE": "JJN/005"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS NORTH",
+        "LGA CODE": "05",
+        "WARD NAME": "GANGARE",
+        "WARD CODE": "JJN/006"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS NORTH",
+        "LGA CODE": "05",
+        "WARD NAME": "IBRAHIM KATSINA",
+        "WARD CODE": "JJN/007"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS NORTH",
+        "LGA CODE": "05",
+        "WARD NAME": "JENTA ADAMU",
+        "WARD CODE": "JJN/008"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS NORTH",
+        "LGA CODE": "05",
+        "WARD NAME": "JENTA APATA",
+        "WARD CODE": "JJN/009"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS NORTH",
+        "LGA CODE": "05",
+        "WARD NAME": "JOS JARAWA",
+        "WARD CODE": "JJN/010"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS NORTH",
+        "LGA CODE": "05",
+        "WARD NAME": "KABONG",
+        "WARD CODE": "JJN/011"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS NORTH",
+        "LGA CODE": "05",
+        "WARD NAME": "LAMINGO",
+        "WARD CODE": "JJN/012"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS NORTH",
+        "LGA CODE": "05",
+        "WARD NAME": "NARAGUTA \u2018A\u2019",
+        "WARD CODE": "JJN/013"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS NORTH",
+        "LGA CODE": "05",
+        "WARD NAME": "NARAGUTA \u2018B\u2019",
+        "WARD CODE": "JJN/014"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS NORTH",
+        "LGA CODE": "05",
+        "WARD NAME": "RIGIZA/TARGWONG",
+        "WARD CODE": "JJN/015"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS NORTH",
+        "LGA CODE": "05",
+        "WARD NAME": "SARKIN ARAB",
+        "WARD CODE": "JJN/016"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS NORTH",
+        "LGA CODE": "05",
+        "WARD NAME": "TAFAWA BALEWA",
+        "WARD CODE": "JJN/017"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS NORTH",
+        "LGA CODE": "05",
+        "WARD NAME": "TUDUN WADA",
+        "WARD CODE": "JJN/018"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS NORTH",
+        "LGA CODE": "05",
+        "WARD NAME": "ANGWAN ROGO/RIMI",
+        "WARD CODE": "JJN/019"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS SOUTH",
+        "LGA CODE": "06",
+        "WARD NAME": "DU \u2018B\u2019",
+        "WARD CODE": "005"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS SOUTH",
+        "LGA CODE": "06",
+        "WARD NAME": "GIRING",
+        "WARD CODE": "006"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS SOUTH",
+        "LGA CODE": "06",
+        "WARD NAME": "GYEL \u2018A\u2019",
+        "WARD CODE": "007"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS SOUTH",
+        "LGA CODE": "06",
+        "WARD NAME": "GYEL \u2018B\u2019",
+        "WARD CODE": "008"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS SOUTH",
+        "LGA CODE": "06",
+        "WARD NAME": "HWOLSHE",
+        "WARD CODE": "009"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "JOS SOUTH",
+        "LGA CODE": "06",
+        "WARD NAME": "KURU \u2018A\u2019",
+        "WARD CODE": "010"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "\u2013 KANAM",
+        "LGA CODE": "-07",
+        "WARD NAME": "\u2013  NANMARAN",
+        "WARD CODE": "- 020"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": null,
+        "LGA CODE": null,
+        "WARD NAME": "AMPANG EAST",
+        "WARD CODE": "001"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": null,
+        "LGA CODE": null,
+        "WARD NAME": "AMPANG EAST \u2018B\u2019",
+        "WARD CODE": "002"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": null,
+        "LGA CODE": null,
+        "WARD NAME": "AMPER CHIKA \u2018A\u2019",
+        "WARD CODE": "003"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": null,
+        "LGA CODE": null,
+        "WARD NAME": "AMPER CHIKA \u2018B\u2019",
+        "WARD CODE": "004"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": null,
+        "LGA CODE": null,
+        "WARD NAME": "AMPER SERI",
+        "WARD CODE": "005"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": null,
+        "LGA CODE": null,
+        "WARD NAME": "DAWAKI",
+        "WARD CODE": "006"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": null,
+        "LGA CODE": null,
+        "WARD NAME": "GARAM",
+        "WARD CODE": "007"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": null,
+        "LGA CODE": null,
+        "WARD NAME": "GUGUR",
+        "WARD CODE": "008"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": null,
+        "LGA CODE": null,
+        "WARD NAME": "KABWIR - PADA",
+        "WARD CODE": "009"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": null,
+        "LGA CODE": null,
+        "WARD NAME": "KABWIR /G",
+        "WARD CODE": "010"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": null,
+        "LGA CODE": null,
+        "WARD NAME": "KANGMUN",
+        "WARD CODE": "011"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": null,
+        "LGA CODE": null,
+        "WARD NAME": "KURUM/BU",
+        "WARD CODE": "012"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": null,
+        "LGA CODE": null,
+        "WARD NAME": "KWARIP",
+        "WARD CODE": "013"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": null,
+        "LGA CODE": null,
+        "WARD NAME": "LANGSHI",
+        "WARD CODE": "014"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": null,
+        "LGA CODE": null,
+        "WARD NAME": "NEMEL",
+        "WARD CODE": "015"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": null,
+        "LGA CODE": null,
+        "WARD NAME": "SHIWER",
+        "WARD CODE": "016"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": null,
+        "LGA CODE": null,
+        "WARD NAME": "SOMJI",
+        "WARD CODE": "017"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": null,
+        "LGA CODE": null,
+        "WARD NAME": "TABULLUNG",
+        "WARD CODE": "018"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "LANGTANG SOUTH",
+        "LGA CODE": "010",
+        "WARD NAME": "DADIN KOWA",
+        "WARD CODE": "001"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "LANGTANG SOUTH",
+        "LGA CODE": "010",
+        "WARD NAME": "FAJUL",
+        "WARD CODE": "002"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "LANGTANG SOUTH",
+        "LGA CODE": "010",
+        "WARD NAME": "FAYA",
+        "WARD CODE": "003"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "LANGTANG SOUTH",
+        "LGA CODE": "010",
+        "WARD NAME": "GAMAKAI",
+        "WARD CODE": "004"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "LANGTANG SOUTH",
+        "LGA CODE": "010",
+        "WARD NAME": "JEMKUR",
+        "WARD CODE": "005"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "LANGTANG SOUTH",
+        "LGA CODE": "010",
+        "WARD NAME": "LASHEL",
+        "WARD CODE": "006"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "LANGTANG SOUTH",
+        "LGA CODE": "010",
+        "WARD NAME": "MABUDI",
+        "WARD CODE": "007"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "LANGTANG SOUTH",
+        "LGA CODE": "010",
+        "WARD NAME": "MABUDI   SOUTH",
+        "WARD CODE": "008"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "LANGTANG SOUTH",
+        "LGA CODE": "010",
+        "WARD NAME": "MAGAMA",
+        "WARD CODE": "009"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "LANGTANG SOUTH",
+        "LGA CODE": "010",
+        "WARD NAME": "NASARAWA",
+        "WARD CODE": "010"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "LANGTANG SOUTH",
+        "LGA CODE": "010",
+        "WARD NAME": "SABON GIDA",
+        "WARD CODE": "011"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "LANGTANG SOUTH",
+        "LGA CODE": "010",
+        "WARD NAME": "TAKBOL",
+        "WARD CODE": "012"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "LANGTANG SOUTH",
+        "LGA CODE": "010",
+        "WARD NAME": "TALGWANG",
+        "WARD CODE": "013"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "LANGTANG SOUTH",
+        "LGA CODE": "010",
+        "WARD NAME": "TIMBOL",
+        "WARD CODE": "014"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "MANGU L.G.A",
+        "LGA CODE": "11",
+        "WARD NAME": "TURAKI",
+        "WARD CODE": "015"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "MANGU",
+        "LGA CODE": "11",
+        "WARD NAME": "AMPANG WEST",
+        "WARD CODE": "001"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "MANGU",
+        "LGA CODE": "11",
+        "WARD NAME": "BWOMPE",
+        "WARD CODE": "002"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "MANGU",
+        "LGA CODE": "11",
+        "WARD NAME": "CHAKFEM",
+        "WARD CODE": "003"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "MANGU",
+        "LGA CODE": "11",
+        "WARD NAME": "CHANSO",
+        "WARD CODE": "004"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "MANGU",
+        "LGA CODE": "11",
+        "WARD NAME": "GINDIRI I",
+        "WARD CODE": "005"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "MANGU",
+        "LGA CODE": "11",
+        "WARD NAME": "GINDIRI II",
+        "WARD CODE": "006"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "MANGU",
+        "LGA CODE": "11",
+        "WARD NAME": "JANARET",
+        "WARD CODE": "007"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "MANGU",
+        "LGA CODE": "11",
+        "WARD NAME": "JIPAL",
+        "WARD CODE": "008"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "MANGU",
+        "LGA CODE": "11",
+        "WARD NAME": "KADUNU",
+        "WARD CODE": "009"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "MANGU",
+        "LGA CODE": "11",
+        "WARD NAME": "KASUWA ALI",
+        "WARD CODE": "010"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "MANGU",
+        "LGA CODE": "11",
+        "WARD NAME": "KERANG",
+        "WARD CODE": "011"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "MANGU",
+        "LGA CODE": "11",
+        "WARD NAME": "KOMBUN",
+        "WARD CODE": "012"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "MANGU",
+        "LGA CODE": "11",
+        "WARD NAME": "LANGAI",
+        "WARD CODE": "013"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "MANGU",
+        "LGA CODE": "11",
+        "WARD NAME": "MANGU I",
+        "WARD CODE": "014"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "MANGU",
+        "LGA CODE": "11",
+        "WARD NAME": "MANGU II",
+        "WARD CODE": "015"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "MANGU",
+        "LGA CODE": "11",
+        "WARD NAME": "MANGUN",
+        "WARD CODE": "016"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "MANGU",
+        "LGA CODE": "11",
+        "WARD NAME": "MANGU HALLE",
+        "WARD CODE": "017"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "MANGU",
+        "LGA CODE": "11",
+        "WARD NAME": "PANYAM",
+        "WARD CODE": "018"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "MANGU",
+        "LGA CODE": "11",
+        "WARD NAME": "PANYAM SOUTH",
+        "WARD CODE": "019"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "MANGU",
+        "LGA CODE": "11",
+        "WARD NAME": "PUSHIT",
+        "WARD CODE": "020"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": null,
+        "LGA CODE": null,
+        "WARD NAME": null,
+        "WARD CODE": null
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": null,
+        "LGA CODE": null,
+        "WARD NAME": null,
+        "WARD CODE": null
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "MIKANG",
+        "LGA CODE": "012",
+        "WARD NAME": "GARKAWA NORTH",
+        "WARD CODE": "005"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "GARKAWA NORTH EAST",
+        "LGA CODE": "012",
+        "WARD NAME": "GARKAWA NORTH EAST",
+        "WARD CODE": "006"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": null,
+        "LGA CODE": null,
+        "WARD NAME": "KOENOEM \u2018A\u2019",
+        "WARD CODE": "008"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": null,
+        "LGA CODE": null,
+        "WARD NAME": "KOENOEM \u2018B\u2019",
+        "WARD CODE": "009"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": null,
+        "LGA CODE": null,
+        "WARD NAME": "KOENOEM \u2018C\u2019",
+        "WARD CODE": "010"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": null,
+        "LGA CODE": null,
+        "WARD NAME": "LALIN",
+        "WARD CODE": "011"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "PANKSHIN",
+        "LGA CODE": "13",
+        "WARD NAME": "KANGMUN",
+        "WARD CODE": "PNK/008"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "QUA\u2019ANPAN",
+        "LGA CODE": "014",
+        "WARD NAME": "WUSHEMBE",
+        "WARD CODE": "PNK/ 020"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "QUA\u2019ANPAN",
+        "LGA CODE": "14",
+        "WARD NAME": "BWALL",
+        "WARD CODE": "01"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "QUA\u2019ANPAN",
+        "LGA CODE": "14",
+        "WARD NAME": "DOEMAK-KOPLONG",
+        "WARD CODE": "02"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "QUA\u2019ANPAN",
+        "LGA CODE": "14",
+        "WARD NAME": "DOKAN-KASUWA",
+        "WARD CODE": "03"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "QUA\u2019ANPAN",
+        "LGA CODE": "14",
+        "WARD NAME": "DOKAN-KASUWA WEST",
+        "WARD CODE": "04"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "QUA\u2019ANPAN",
+        "LGA CODE": "14",
+        "WARD NAME": "JANTA-ANINGO",
+        "WARD CODE": "05"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "QUA\u2019ANPAN",
+        "LGA CODE": "14",
+        "WARD NAME": "KWA",
+        "WARD CODE": "06"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "QUA\u2019ANPAN",
+        "LGA CODE": "14",
+        "WARD NAME": "KWAGAR",
+        "WARD CODE": "07"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "QUA\u2019ANPAN",
+        "LGA CODE": "14",
+        "WARD NAME": "KWANDE",
+        "WARD CODE": "08"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "QUA\u2019ANPAN",
+        "LGA CODE": "14",
+        "WARD NAME": "KWALLA MOEDA",
+        "WARD CODE": "09"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "QUA\u2019ANPAN",
+        "LGA CODE": "14",
+        "WARD NAME": "DOEMAK GOECHIM",
+        "WARD CODE": "010"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "QUA\u2019ANPAN",
+        "LGA CODE": "14",
+        "WARD NAME": "KWALLA YITLA\u2019AR",
+        "WARD CODE": "011"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "QUA\u2019ANPAN",
+        "LGA CODE": "14",
+        "WARD NAME": "KWANG",
+        "WARD CODE": "012"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "QUA\u2019ANPAN",
+        "LGA CODE": "14",
+        "WARD NAME": "KURGWI EAST",
+        "WARD CODE": "013"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "QUA\u2019ANPAN",
+        "LGA CODE": "14",
+        "WARD NAME": "KURGWI WEST",
+        "WARD CODE": "014"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "QUA\u2019ANPAN",
+        "LGA CODE": "14",
+        "WARD NAME": "LATOK",
+        "WARD CODE": "015"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "QUA\u2019ANPAN",
+        "LGA CODE": "14",
+        "WARD NAME": "LANKAKU/KWARI",
+        "WARD CODE": "016"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "QUA\u2019ANPAN",
+        "LGA CODE": "14",
+        "WARD NAME": "LARDANG",
+        "WARD CODE": "017"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "QUA\u2019ANPAN",
+        "LGA CODE": "14",
+        "WARD NAME": "LUUKWO",
+        "WARD CODE": "018"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "QUA\u2019ANPAN",
+        "LGA CODE": "14",
+        "WARD NAME": "NAMU",
+        "WARD CODE": "019"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "SHENDAM L.G.A",
+        "LGA CODE": "016",
+        "WARD NAME": "WERENG",
+        "WARD CODE": "017"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "SHENDAM",
+        "LGA CODE": "016",
+        "WARD NAME": "DERTENG",
+        "WARD CODE": "00"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "SHENDAM",
+        "LGA CODE": "016",
+        "WARD NAME": "DOKAN TOFA",
+        "WARD CODE": "002"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "SHENDAM",
+        "LGA CODE": "016",
+        "WARD NAME": "JIBAN",
+        "WARD CODE": "003"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "SHENDAM",
+        "LGA CODE": "016",
+        "WARD NAME": "KALONG",
+        "WARD CODE": "004"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "SHENDAM",
+        "LGA CODE": "016",
+        "WARD NAME": "KURUNGBAU 'A'",
+        "WARD CODE": "005"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "SHENDAM",
+        "LGA CODE": "016",
+        "WARD NAME": "KURUNGBAU 'B'",
+        "WARD CODE": "006"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "SHENDAM",
+        "LGA CODE": "016",
+        "WARD NAME": "KWAPKILIK",
+        "WARD CODE": "007"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "SHENDAM",
+        "LGA CODE": "016",
+        "WARD NAME": "MAMBIAL",
+        "WARD CODE": "008"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "SHENDAM",
+        "LGA CODE": "016",
+        "WARD NAME": "MOEKAT",
+        "WARD CODE": "009"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "SHENDAM",
+        "LGA CODE": "016",
+        "WARD NAME": "NGOOTLANG",
+        "WARD CODE": "010"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "SHENDAM",
+        "LGA CODE": "016",
+        "WARD NAME": "NYAK",
+        "WARD CODE": "011"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "SHENDAM",
+        "LGA CODE": "016",
+        "WARD NAME": "PANGSHOM",
+        "WARD CODE": "012"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "SHENDAM",
+        "LGA CODE": "016",
+        "WARD NAME": "PANGWASA",
+        "WARD CODE": "013"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "SHENDAM",
+        "LGA CODE": "016",
+        "WARD NAME": "POESHIP",
+        "WARD CODE": "014"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "SHENDAM",
+        "LGA CODE": "016",
+        "WARD NAME": "SHENDAM CENTRAL 'A'",
+        "WARD CODE": "015"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "SHENDAM",
+        "LGA CODE": "016",
+        "WARD NAME": "SHENDAM CENTRAL 'B'",
+        "WARD CODE": "016"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "SHENDAM",
+        "LGA CODE": "016",
+        "WARD NAME": "SHIMANKAR",
+        "WARD CODE": "017"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "SHENDAM",
+        "LGA CODE": "016",
+        "WARD NAME": "YELWA EAST",
+        "WARD CODE": "018"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "SHENDAM",
+        "LGA CODE": "016",
+        "WARD NAME": "YELWA WEST",
+        "WARD CODE": "019"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "SHENDAM",
+        "LGA CODE": "016",
+        "WARD NAME": "ZEMSUK",
+        "WARD CODE": "020"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "WASE",
+        "LGA CODE": "17",
+        "WARD NAME": "BASHAR",
+        "WARD CODE": "001"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "WASE",
+        "LGA CODE": "17",
+        "WARD NAME": "DANBIRAM",
+        "WARD CODE": "002"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "WASE",
+        "LGA CODE": "17",
+        "WARD NAME": "GAJI",
+        "WARD CODE": "003"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "WASE",
+        "LGA CODE": "17",
+        "WARD NAME": "GIMBI PINAU",
+        "WARD CODE": "005"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "WASE",
+        "LGA CODE": "17",
+        "WARD NAME": "GUDUS",
+        "WARD CODE": "006"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "WASE",
+        "LGA CODE": "17",
+        "WARD NAME": "KADARKO",
+        "WARD CODE": "007"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "WASE",
+        "LGA CODE": "17",
+        "WARD NAME": "KAMPANI",
+        "WARD CODE": "008"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "WASE",
+        "LGA CODE": "17",
+        "WARD NAME": "KUMBONG",
+        "WARD CODE": "009"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "WASE",
+        "LGA CODE": "17",
+        "WARD NAME": "KUMBUR",
+        "WARD CODE": "010"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "WASE",
+        "LGA CODE": "17",
+        "WARD NAME": "KUYAMBANA",
+        "WARD CODE": "011"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "WASE",
+        "LGA CODE": "17",
+        "WARD NAME": "LAMBA",
+        "WARD CODE": "012"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "WASE",
+        "LGA CODE": "17",
+        "WARD NAME": "MALLAM ADAMA",
+        "WARD CODE": "013"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "WASE",
+        "LGA CODE": "17",
+        "WARD NAME": "MAVO",
+        "WARD CODE": "014"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "WASE",
+        "LGA CODE": "17",
+        "WARD NAME": "NYALUM",
+        "WARD CODE": "015"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "WASE",
+        "LGA CODE": "17",
+        "WARD NAME": "SALUWE",
+        "WARD CODE": "016"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "WASE",
+        "LGA CODE": "17",
+        "WARD NAME": "WADATA GARGA",
+        "WARD CODE": "017"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "WASE",
+        "LGA CODE": "17",
+        "WARD NAME": "WASE TOFA",
+        "WARD CODE": "018"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "WASE",
+        "LGA CODE": "17",
+        "WARD NAME": "YULI",
+        "WARD CODE": "019"
+    },
+    {
+        "STATE NAME": "PLATEAU",
+        "STATE CODE": "PL",
+        "LGA NAME": "WASE",
+        "LGA CODE": "17",
+        "WARD NAME": "YOLA WAKAT",
+        "WARD CODE": "020"
+    }
+]
