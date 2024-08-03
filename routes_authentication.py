@@ -13,6 +13,8 @@ routes_authentication = Blueprint('authentication_routes', __name__)
 
 users_collection = db.users
 auth_collection = db.auth
+chairman_collection = db.chairman
+deputy_chairman_collection = db.deputy_chairman
 
 # Helper function to generate a random password
 def generate_password(length=8):
@@ -331,5 +333,28 @@ def logout():
 @routes_authentication.route('/create-chairman', methods=['POST'])
 @validate_schema(GenerateChairmanWithDeputySchema())
 def create_chairman_with_deputy():
+    data = request.get_json()
+    chairman_data = data.get('chairman')
+    deputy_data = data.get('deputyChairman')
+
+    chairman_data['in_review'] = True
+    deputy_data['in_review'] = True
+
+    chairman_collection.insert_one(chairman_data)
+    deputy_chairman_collection.insert_one(deputy_data)
 
     return jsonify({'message': 'Chairman created successfully', 'password': "password"}), 201
+
+
+# Endpoint to get all chairmen
+@routes_authentication.route('/chairmen', methods=['GET'])
+def get_chairmen():
+    chairmen = list(chairman_collection.find(projection={'_id': False}))
+    return jsonify({"chairmen": chairmen}), 200
+
+
+# Endpoint to get all deputy chairmen
+@routes_authentication.route('/deputy-chairmen', methods=['GET'])
+def get_deputy_chairmen():
+    deputy_chairmen = list(deputy_chairman_collection.find(projection={'_id': False}))
+    return jsonify({"deputy_chairmen": deputy_chairmen}), 200
