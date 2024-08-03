@@ -6,6 +6,9 @@ from datetime import datetime, timedelta, timezone
 import bcrypt, requests
 from flasgger import swag_from
 
+from decorators import validate_schema
+from schema import GenerateChairmanWithDeputySchema
+
 routes_authentication = Blueprint('authentication_routes', __name__)
 
 users_collection = db.users
@@ -323,3 +326,10 @@ def logout():
         return jsonify({'message': 'Logout successful'}), 200
     else:
         return jsonify({'message': 'Invalid or expired token'}), 400
+
+
+@routes_authentication.route('/create-chairman', methods=['POST'])
+@validate_schema(GenerateChairmanWithDeputySchema())
+def create_chairman_with_deputy():
+
+    return jsonify({'message': 'Chairman created successfully', 'password': "password"}), 201
