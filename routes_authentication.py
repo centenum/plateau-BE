@@ -188,6 +188,8 @@ def login():
     # Generate token and store in auth collection
     token = generate_token()
     token_expiry = datetime.now(timezone.utc) + timedelta(hours=1)  # Token valid for 1 hour
+
+    # hash password with new salt
     auth_record = {
         'user_id': user['_id'],
         'token': token,
@@ -203,7 +205,12 @@ def login():
 
     users_collection.update_one({'_id': user['_id']}, {'$set': {'otp': otp, 'otp_reference': reference}})
 
-    return jsonify({'message': 'Login successful', 'token': token}), 200
+
+    return jsonify({
+        'message': 'Login successful', 
+        'token': token,
+
+    }), 200
     
 # Endpoint to verify OTP and generate login token
 @routes_authentication.route('/verify-otp', methods=['POST'])

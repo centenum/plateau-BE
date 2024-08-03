@@ -1,0 +1,97 @@
+[
+    {
+        "id": 1,
+        "name": "Peoples Redemption Party",
+        "acronym": "PRP"
+    },
+    {
+        "id": 2,
+        "name": "Social Democratic Party",
+        "acronym": "SDP"
+    },
+    {
+        "id": 3,
+        "name": "Youth Party",
+        "acronym": "YP"
+    },
+    {
+        "id": 4,
+        "name": "Zenith Labour Party",
+        "acronym": "ZLP"
+    },
+    {
+        "id": 5,
+        "name": "All Progressive Grand Alliance",
+        "acronym": "APGA"
+    },
+    {
+        "id": 6,
+        "name": "Allied Peoples Movement",
+        "acronym": "APM"
+    },
+    {
+        "id": 7,
+        "name": "Young Progressive Party",
+        "acronym": "YPP"
+    },
+    {
+        "id": 8,
+        "name": "Boot Party",
+        "acronym": "BP"
+    },
+    {
+        "id": 9,
+        "name": "All Progressive Congress",
+        "acronym": "APC"
+    },
+    {
+        "id": 10,
+        "name": "African Democratic Congress",
+        "acronym": "ADC"
+    },
+    {
+        "id": 11,
+        "name": "African Action Congress",
+        "acronym": "AAC"
+    },
+    {
+        "id": 12,
+        "name": "Action Peoples Party",
+        "acronym": "APP"
+    },
+    {
+        "id": 13,
+        "name": "Action Democratic Party",
+        "acronym": "ADP"
+    },
+    {
+        "id": 14,
+        "name": "Action Alliance",
+        "acronym": "AA"
+    },
+    {
+        "id": 15,
+        "name": "Accord",
+        "acronym": "A"
+    },
+    {
+        "id": 16,
+        "name": "Peoples Democratic Party",
+        "acronym": "PDP"
+    },
+    {
+        "id": 17,
+        "name": "New Nigeria Peoples Party",
+        "acronym": "NNPP"
+    },
+    {
+        "id": 18,
+        "name": "National Rescue Movemt",
+        "acronym": "NRM"
+    },
+    {
+        "id": 19,
+        "name": "Labour Party",
+        "acronym": "LP"
+    }
+]
