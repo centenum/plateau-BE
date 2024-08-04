@@ -105,7 +105,8 @@ def verify_sendchamp_otp(user, verification_code):
             'examples': {
                 'application/json': {
                     'message': 'User registered successfully',
-                    'password': 'generated-password'
+                    'password': 'generated-password',
+                    'hashedPassword': 'hashed-password'
                 }
             }
         }
@@ -126,7 +127,7 @@ def register_user():
         return jsonify({'message': 'Username or email already exists'}), 400
 
     # Hash the password with bcrypt
-    hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt())
+    hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
 
     user = {
         'firstName': first_name,
@@ -138,7 +139,7 @@ def register_user():
     }
 
     users_collection.insert_one(user)
-    return jsonify({'message': 'User registered successfully', 'password': password}), 201
+    return jsonify({'message': 'User registered successfully', 'password': password, 'hashedPassword': hashed_password}), 201
 
 # Endpoint for user login
 @routes_authentication.route('/login', methods=['POST'])
@@ -160,11 +161,12 @@ def register_user():
     ],
     'responses': {
         200: {
-            'description': 'OTP sent successfully',
+            'description': 'Login successful',
             'examples': {
                 'application/json': {
-                    'message': 'OTP sent successfully',
-                    'token': 'generated-token'
+                    'message': 'Login successful',
+                    'token': 'generated-token',
+                    'hashedPassword': 'password-hash',
                 }
             }
         },
@@ -180,21 +182,20 @@ def register_user():
 })
 def login():
     data = request.get_json()
-    username = data.get('username')
+    email = data.get('email')
     password = data.get('password')
 
-    user = users_collection.find_one({'username': username})
+    user = users_collection.find_one({'email': email})
     if not user:
-        return jsonify({'message': 'Invalid username'}), 401
+        return jsonify({'message': 'Invalid email or password'}), 401
     
     if not bcrypt.checkpw(password.encode('utf-8'), user['password'].encode('utf-8')):
-        return jsonify({'message': 'Invalid password'}), 401
-        
+        return jsonify({'message': 'Invalid email or password'}), 401
+
     # Generate token and store in auth collection
     token = generate_token()
     token_expiry = datetime.now(timezone.utc) + timedelta(hours=1)  # Token valid for 1 hour
 
-    # hash password with new salt
     auth_record = {
         'user_id': user['_id'],
         'token': token,
@@ -210,12 +211,14 @@ def login():
 
     users_collection.update_one({'_id': user['_id']}, {'$set': {'otp': otp, 'otp_reference': reference}})
 
-
+    # Extract the hash and salt from the stored password
+    hash_salt = user['password']  # Assuming the stored format includes the salt
+    
     return jsonify({
-        'message': 'Login successful', 
+        'message': 'Login successful',
         'token': token,
-
-    }), 200
+        'hashedPassword': hash_salt,
+    }), 200 
     
 # Endpoint to verify OTP and generate login token
 @routes_authentication.route('/verify-otp', methods=['POST'])
