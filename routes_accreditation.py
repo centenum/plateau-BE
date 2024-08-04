@@ -205,6 +205,7 @@ def manual_accreditation_step1():
     # Verify VIN logic here
     # For demonstration, let's assume VIN validation is done through a mock function
     voter = verify_vin(vin, polling_unit)
+    voter['_id'] = str(voter['_id']) #manually handle object id
     if voter:
         return jsonify({'message': 'VIN valid', 'voterDetails': voter}), 200
     else:

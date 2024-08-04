@@ -6,18 +6,36 @@ from flask_cors import CORS
 # from whatsapp_bot import send_whatsapp_message
 from flasgger import Swagger
 
+import json
+from bson import ObjectId
+from datetime import datetime
+
 from routes_accreditation import routes_accreditation
 from routes_authentication import routes_authentication
 from routes_general_data import routes_general_data
 
+# Custom JSON encoder to handle ObjectId & datetime
+class CustomJSONEncoder(json.JSONEncoder):
+    """JSON Encoder that converts datetime objects to ISO format strings."""
+    def default(self, obj):
+        if isinstance(obj, ObjectId):
+            return str(obj)
+        elif isinstance(obj, datetime):
+            return obj.isoformat()
+        # Let the base class default method raise the TypeError
+        return super(CustomJSONEncoder, self).default(obj)
+    
 app = Flask(__name__)
 CORS(app)  # This will enable CORS for all routes
 swagger = Swagger(app)
 
+# Set the custom JSON encoder for the Flask app
+app.json_encoder = CustomJSONEncoder
+
 app.register_blueprint(routes_accreditation)
 app.register_blueprint(routes_authentication)
 app.register_blueprint(routes_general_data)
-
+    
 OPENAI_KEY = os.getenv("OPENAI_KEY")
 
 # Set up your OpenAI API key
