@@ -129,6 +129,8 @@ class GenerateChairmanWithDeputySchema(ma.Schema):
 class CouncillorSchema(ma.Schema):
     firstName = ma.fields.String(required=True)
     lastName = ma.fields.String(required=True)
+    otherNames = ma.fields.String()
+    residentialAddress = ma.fields.String(required=True)
     address = ma.fields.String(required=True)
     occupation = ma.fields.String(required=True)
     localGovernment = ma.fields.String(required=True)
