@@ -200,27 +200,18 @@ def auto_accreditation_step3():
 def manual_accreditation_step1():
     data = request.get_json()
     vin = data.get('vin')
+    polling_unit = data.get('pollingUnit')
 
     # Verify VIN logic here
     # For demonstration, let's assume VIN validation is done through a mock function
-    voter = verify_vin(vin)
+    voter = verify_vin(vin, polling_unit)
     if voter:
         return jsonify({'message': 'VIN valid', 'voterDetails': voter}), 200
     else:
         return jsonify({'message': 'Invalid VIN'}), 400
 
-def verify_vin(vin):
-    # Mock function to verify VIN
-    # In real implementation, replace with actual VIN verification logic
-    # For example, a database lookup
-    voters = list(voter_collection.find())
-    if len(voters) == 0:
-        # Upload the voters data to the database
-        with open('data/voters.json') as f:
-            data = json.load(f)
-            voter_collection.insert_many(data)
-        
-    voter = voter_collection.find_one({'vin': vin })
+def verify_vin(vin, polling_unit):
+    voter = voter_collection.find_one({'VIN': vin, 'polling_unit': polling_unit})
     return voter
 
 @routes_accreditation.route('/manual-accreditation/step2', methods=['POST'])
