@@ -155,11 +155,11 @@ def extract_text():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
-from flask import Flask, request, jsonify
-import base64
-import os
+# from flask import Flask, request, jsonify
+# import base64
+# import os
 
-app = Flask(__name__)
+# app = Flask(__name__)
 
 @app.route('/upload', methods=['POST'])
 def upload_image():
