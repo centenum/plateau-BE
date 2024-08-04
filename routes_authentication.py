@@ -426,3 +426,8 @@ def approve_deputy_chairman():
 
     deputy_chairman_collection.update_one({'_id': deputy_chairman_id}, {'$set': {'in_review': False, 'approved': True}})
     return jsonify({'message': 'Deputy Chairman approved'}), 200
+
+
+@routes_authentication.route('/councillors', methods=['POST'])
+def create_councillor():
+    pass

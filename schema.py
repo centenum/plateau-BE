@@ -1,8 +1,13 @@
 import marshmallow as ma
 
 class CriminalOffenceSchema(ma.Schema):
+    arrested = ma.fields.Boolean()
+    optionConclusion = ma.fields.String()
+
+class LunacyInquirySchema(ma.Schema):
     tried = ma.fields.Boolean()
     optionConclusion = ma.fields.String()
+
 
 class BankruptcyEnquirySchema(ma.Schema):
     bankruptcyInvolvment = ma.fields.Boolean()
@@ -87,17 +92,20 @@ class ChairmanSchema(ma.Schema):
     ward = ma.fields.String()
     presentPlaceStayDuration = ma.fields.String()
     criminalOffenseTrial = ma.fields.Nested(CriminalOffenceSchema)
-    conductTribunalTrial = ma.fields.Nested(CriminalOffenceSchema, required=True)
+    conductTribunalTrial = ma.fields.Nested(LunacyInquirySchema, required=True)
     bankruptcyEnquiry = ma.fields.Nested(BankruptcyEnquirySchema, required=True)
     arrestHistory = ma.fields.Nested(CriminalOffenceSchema, required=True)
     politicalPartyData = ma.fields.Nested(PoliticalPartySchema, required=True)
     partySponsorData = ma.fields.Nested(PartySponsorSchema)
     taxHistoryData = ma.fields.Nested(TaxHistorySchema)
     drugHistoryData = ma.fields.Nested(DrugHistorySchema)
-    votedData = ma.fields.Nested(IsVotedSchema)
+    voteData = ma.fields.Nested(IsVotedSchema)
     institutionData = ma.fields.Nested(InstitutionSchema, many=True)
-    educationExperienceData = ma.fields.Nested(EducationExperienceSchema, many=True)
+    educationQualificationData = ma.fields.Nested(EducationExperienceSchema, many=True)
+    lunacyInquiryTrial = ma.fields.Nested(LunacyInquirySchema, required=True)
     workExperienceData = ma.fields.Nested(WorkExperienceSchema, many=True)
+    oath = ma.fields.String()
+    surname = ma.fields.String()
     pastClubsOrSocieties = ma.fields.String()
     contestingReason = ma.fields.String()
     sponsor = ma.fields.String()
