@@ -235,6 +235,7 @@ def login():
 
     user_object_without_password = user
     user_object_without_password.pop('password')
+    user_object_without_password['_id'] = str(user_object_without_password['_id'])
     
     return jsonify({
         'message': 'Login successful',
