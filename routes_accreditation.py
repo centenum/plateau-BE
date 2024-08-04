@@ -79,8 +79,17 @@ def auto_accreditation_step1():
     # Verify voter's card image logic here
     try:
         verification_data = decode_image_to_ocr(voter_card_image)
-        accreditation_collection.update_one({'sessionId': session_id}, 
-                                        {'$set': {'voterCardImage': voter_card_image, 'step': 2}})
+        if 'VIN' not in verification_data:
+            return jsonify({'message': 'Invalid voter\'s card'}), 400
+        
+        voter = voter_collection.find_one({'VIN': verification_data['VIN']})
+        if not voter:
+            return jsonify({'message': 'Invalid VIN' }), 400
+        
+        accreditation_collection.update_one({'sessionId': session_id},{
+            '$set': {
+                'voterCardImage': voter_card_image, 'step': 2, 'polling_unit': voter.get('polling_unit')
+            }})
         return jsonify({'message': 'Voter\'s card verified, proceed to face verification', 'sessionId': session_id}), 200
     except Exception as e:
         return jsonify({'message': "Something went wrong"}), 400
@@ -162,9 +171,11 @@ def auto_accreditation_step3():
         'faceCaptureImage': accreditation_record.get('faceCaptureImage'),
         'accreditedAt': datetime.now(timezone.utc)
     }
-    
+
     # Update the record to complete accreditation
-    accreditation_collection.update_one({'sessionId': session_id}, {'$set': {'status': 'completed', 'voterDetails': voter_details}})
+    accreditation_collection.update_one({'sessionId': session_id}, {'$set': {
+        'status': 'completed', 'voterDetails': voter_details
+    }})
     return jsonify({'message': 'Voter accredited successfully', 'sessionId': session_id}), 200
 
 # Manual Accreditation: 2 steps
@@ -276,11 +287,16 @@ def manual_accreditation_step2():
         'faceCaptureImage': face_capture_image,
         'accreditedAt': datetime.now(timezone.utc)
     }
+
+    voter = voter_collection.find_one({'VIN': vin})
     
     accreditation_collection.insert_one({
         'status': 'completed',
-        'voterDetails': voter_details
+        'voterDetails': voter_details,
+        "polling_unit": voter.get('polling_unit')
     })
+
+    # add accreditation record with polling unit 
     return jsonify({'message': 'Voter accredited successfully'}), 201
 
 @routes_accreditation.route('/accreditation-dashboard', methods=['GET'])
@@ -310,4 +326,30 @@ def manual_accreditation_step2():
 })
 def accreditation_dashboard():
     accreditation_records = list(accreditation_collection.find())
-    return jsonify({'message': 'Accreditation dashboard', 'accreditationRecords': accreditation_records}), 200
+    return jsonify({'message': 'Accreditation dashboard', 
+                    'accreditationRecords': accreditation_records}), 200
+
+
+@routes_accreditation.route('/polling-units', methods=['GET'])
+def get_polling_units():
+    polling_units = list(db.polling_units.find().limit(100))
+    if len(polling_units) == 0:
+        # dump polling unit data 
+        with open('data/polling_units.json') as f:
+            data = json.load(f)
+            db.polling_units.insert_many(data)
+        polling_units = list(db.polling_units.find().limit(100))
+        return jsonify({'pollingUnits': polling_units}), 200
+    
+    for unit in polling_units:
+        # get accredited, get rejected
+        unit['accredited'] = accreditation_collection.count_documents({
+            'polling_unit': unit.get('name'), 
+            'status': 'completed'
+        })
+        
+        unit['rejected'] = accreditation_collection.count_documents({
+            'polling_unit': unit.get('name'), 'status': 'rejected'
+        })
+    
+    return jsonify({'pollingUnits': polling_units}), 200
