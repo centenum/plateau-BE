@@ -368,6 +368,13 @@ def get_deputy_chairmen():
     return jsonify({"deputy_chairmen": deputy_chairmen}), 200
 
 
+@routes_authentication.route('/candidates', methods=['GET'])
+# @login_required 
+def get_candidates():
+    candidates = list(chairman_collection.find(projection={'_id': False}))
+    candidates += list(deputy_chairman_collection.find(projection={'_id': False}))
+    return jsonify({"candidates": candidates}), 200
+
 @routes_authentication.route('/approve-chairman', methods=['POST'])
 # @login_required
 def approve_chairman():
