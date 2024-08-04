@@ -203,7 +203,7 @@ def login():
         'is_active': True
     }
 
-    auth_collection.update_one({"user_id": user['_id']}, {"$set":auth_record}, upsert=True)
+    auth_collection.update_one({"user_id": user['_id']}, {"$set": auth_record}, upsert=True)
 
     # Send OTP via sendChamp
     # phone_number = user.get('phoneNumber')
