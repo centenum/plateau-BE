@@ -362,3 +362,21 @@ def get_chairmen():
 def get_deputy_chairmen():
     deputy_chairmen = list(deputy_chairman_collection.find(projection={'_id': False}))
     return jsonify({"deputy_chairmen": deputy_chairmen}), 200
+
+
+@routes_authentication.route('/approve-chairman', methods=['POST'])
+def approve_chairman():
+    data = request.get_json()
+    chairman_id = data.get('chairman_id')
+
+    chairman_collection.update_one({'_id': chairman_id}, {'$set': {'in_review': False, 'approved': True}})
+    return jsonify({'message': 'Chairman approved'}), 200
+
+
+@routes_authentication.route('/approve-deputy-chairman', methods=['POST'])
+def approve_deputy_chairman():
+    data = request.get_json()
+    deputy_chairman_id = data.get('deputy_chairman_id')
+
+    deputy_chairman_collection.update_one({'_id': deputy_chairman_id}, {'$set': {'in_review': False, 'approved': True}})
+    return jsonify({'message': 'Deputy Chairman approved'}), 200
