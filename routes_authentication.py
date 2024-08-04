@@ -8,6 +8,7 @@ from flasgger import swag_from
 
 from decorators import login_required, validate_schema
 from schema import GenerateChairmanWithDeputySchema
+from bson import json_util
 
 routes_authentication = Blueprint('authentication_routes', __name__)
 
@@ -367,8 +368,10 @@ def create_chairman_with_deputy():
     chairman_data['in_review'] = True
     deputy_data['in_review'] = True
 
-    chairman_collection.insert_one({"chairman":chairman_data, "deputyChairman": deputy_data})
-    deputy_chairman_collection.insert_one(deputy_data)
+    deputy = deputy_chairman_collection.insert_one(deputy_data)
+
+    chairman_data['deputy'] = deputy.inserted_id
+    chairman_collection.insert_one(chairman_data)
 
     return jsonify({'message': 'Chairman created successfully', 'password': "password"}), 201
 
@@ -376,8 +379,22 @@ def create_chairman_with_deputy():
 # Endpoint to get all chairmen
 @routes_authentication.route('/chairmen', methods=['GET'])
 def get_chairmen():
-    chairmen = list(chairman_collection.find(projection={'_id': False}))
-    return jsonify({"chairmen": chairmen}), 200
+    pipeline = [
+        {
+            "$lookup": {
+                "from": "deputy_chairman",
+                "localField": "deputy",
+                "foreignField": "_id",
+                "as": "deputy",
+            },
+        },
+        {
+            "$unwind": "$deputy"
+        }
+    ]
+
+    chairmen = list(chairman_collection.aggregate(pipeline))
+    return json_util.dumps({"chairmen": chairmen}), 200
 
 
 # Endpoint to get all deputy chairmen
