@@ -211,7 +211,7 @@ def manual_accreditation_step1():
         return jsonify({'message': 'Invalid VIN'}), 400
 
 def verify_vin(vin, polling_unit):
-    voter = voter_collection.find_one({'VIN': vin })
+    voter = voter_collection.find_one({'VIN': vin, 'polling_unit': polling_unit})
     return voter
 
 @routes_accreditation.route('/manual-accreditation/step2', methods=['POST'])
