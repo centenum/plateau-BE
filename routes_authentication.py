@@ -406,9 +406,17 @@ def get_deputy_chairmen():
 
 @routes_authentication.route('/candidates', methods=['GET'])
 def get_candidates():
-    candidates = list(chairman_collection.find(projection={'_id': False}))
-    candidates += list(deputy_chairman_collection.find(projection={'_id': False}))
-    return jsonify({"candidates": candidates}), 200
+    chairmen = list(chairman_collection.find(projection={'_id': False}))
+    deputyChairmen = list(deputy_chairman_collection.find(projection={'_id': False}))
+    councillors = list(db.councillors.find(projection={'_id': False}))
+
+    return jsonify({
+        "candidates": {
+            "chairmen": chairmen, 
+            "deputyChairmen": deputyChairmen, 
+            "councillors": councillors
+        }
+    }), 200
 
 @routes_authentication.route('/approve-chairman', methods=['POST'])
 def approve_chairman():
