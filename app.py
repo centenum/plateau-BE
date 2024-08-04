@@ -155,6 +155,12 @@ def extract_text():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+from flask import Flask, request, jsonify
+import base64
+import os
+
+app = Flask(__name__)
+
 @app.route('/upload', methods=['POST'])
 def upload_image():
     data = request.get_json()
@@ -173,8 +179,12 @@ def upload_image():
     except Exception as e:
         print("Error:", e)
         result = {"status": False}
-    
-    file_path = os.path.join('uploads', 'captured_image.png')
+
+    # Ensure the uploads directory exists
+    uploads_dir = 'uploads'
+    os.makedirs(uploads_dir, exist_ok=True)
+
+    file_path = os.path.join(uploads_dir, 'captured_image.png')
     with open(file_path, 'wb') as f:
         f.write(image_data)
 
