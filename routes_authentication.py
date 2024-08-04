@@ -208,8 +208,9 @@ def login():
     # phone_number = user.get('phoneNumber')
     # first_name = user['firstName']
     # reference, otp = send_champ_otp(phone_number, first_name)
+    # users_collection.update_one({'_id': user['_id']}, {'$set': {'otp': otp, 'otp_reference': reference, 'lastLogin': datetime.now(timezone.utc)}})
 
-    users_collection.update_one({'_id': user['_id']}, {'$set': {'otp': otp, 'otp_reference': reference}})
+    users_collection.update_one({'_id': user['_id']}, {'$set': {'lastLogin': datetime.now(timezone.utc)}})
 
     # Extract the hash and salt from the stored password
     hash_salt = user['password']  # Assuming the stored format includes the salt
