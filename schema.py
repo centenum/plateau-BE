@@ -118,4 +118,18 @@ class GenerateChairmanWithDeputySchema(ma.Schema):
     deputyChairman = ma.fields.Nested(ChairmanSchema, required=True)
 
 
-
+class CouncillorSchema(ma.Schema):
+    firstName = ma.fields.String(required=True)
+    lastName = ma.fields.String(required=True)
+    address = ma.fields.String(required=True)
+    occupation = ma.fields.String(required=True)
+    localGovernment = ma.fields.String(required=True)
+    surname = ma.fields.String(required=True)
+    birthDate = ma.fields.Date(required=True)
+    ward = ma.fields.String(required=True)
+    state = ma.fields.String(required=True)
+    nationality = ma.fields.String(required=True)
+    institutionData = ma.fields.Nested(InstitutionSchema, many=True)
+    sponsor = ma.fields.String()
+    nominators = ma.fields.Nested(NominatorSchema, many=True)
+    oath = ma.fields.String()

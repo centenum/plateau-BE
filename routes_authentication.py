@@ -7,7 +7,7 @@ import bcrypt, requests
 from flasgger import swag_from
 
 from decorators import login_required, validate_schema
-from schema import GenerateChairmanWithDeputySchema
+from schema import CouncillorSchema, GenerateChairmanWithDeputySchema
 from bson import json_util
 
 routes_authentication = Blueprint('authentication_routes', __name__)
@@ -429,5 +429,10 @@ def approve_deputy_chairman():
 
 
 @routes_authentication.route('/councillors', methods=['POST'])
+@validate_schema(CouncillorSchema())
 def create_councillor():
-    pass
+    data = request.get_json()
+    data['in_review'] = True
+
+    db.councillors.insert_one(data)
+    return jsonify({'message': 'Councillor created successfully'}), 201
