@@ -1,3 +1,4 @@
+import json
 from flask import Blueprint, request, jsonify
 from config import db
 import uuid
@@ -7,6 +8,7 @@ from flasgger import swag_from
 routes_accreditation = Blueprint('accreditation_routes', __name__)
 
 accreditation_collection = db.accreditation
+voter_collection = db.voters
 
 # Helper function to generate a unique session ID
 def generate_session_id():
@@ -211,12 +213,15 @@ def verify_vin(vin):
     # Mock function to verify VIN
     # In real implementation, replace with actual VIN verification logic
     # For example, a database lookup
-    mock_voter = {
-        'firstName': 'John',
-        'lastName': 'Doe',
-        'pollingUnit': 'Unit 1'
-    }
-    return mock_voter if vin == 'valid_vin' else None
+    voters = list(voter_collection.find())
+    if len(voters) == 0:
+        # Upload the voters data to the database
+        with open('data/voters.json') as f:
+            data = json.load(f)
+            voter_collection.insert_many(data)
+        
+    voter = voter_collection.find_one({'vin': vin })
+    return voter
 
 @routes_accreditation.route('/manual-accreditation/step2', methods=['POST'])
 @swag_from({
