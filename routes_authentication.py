@@ -181,6 +181,9 @@ def register_user():
                     'message': 'Login successful',
                     'token': 'generated-token',
                     'hashedPassword': 'password-hash',
+                    'polling_unit': 'polling-unit-name',
+                    'ward': 'ward-name',
+                    'lga': 'lga-name'
                 }
             }
         },
@@ -229,11 +232,15 @@ def login():
 
     # Extract the hash and salt from the stored password
     hash_salt = user['password']  # Assuming the stored format includes the salt
+
+    user_object_without_password = user
+    user_object_without_password.pop('password')
     
     return jsonify({
         'message': 'Login successful',
         'token': token,
         'hashedPassword': hash_salt,
+        'user': user_object_without_password
     }), 200 
     
 # Endpoint to verify OTP and generate login token
