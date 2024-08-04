@@ -65,7 +65,8 @@ def get_voters():
 
     # Convert results to JSON string and then encrypt
     results_json = json.dumps(results)
-    encrypted_results = cipher_suite.encrypt(results_json.encode())
+    return jsonify({"data": results_json})
+    # encrypted_results = cipher_suite.encrypt(results_json.encode())
 
     # Return encrypted data as a response
-    return jsonify({"data": encrypted_results.decode()})
+    # return jsonify({"data": encrypted_results.decode()})
