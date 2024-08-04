@@ -406,9 +406,9 @@ def get_deputy_chairmen():
 
 @routes_authentication.route('/candidates', methods=['GET'])
 def get_candidates():
-    chairmen = list(chairman_collection.find(projection={'_id': False}))
-    deputyChairmen = list(deputy_chairman_collection.find(projection={'_id': False}))
-    councillors = list(db.councillors.find(projection={'_id': False}))
+    chairmen = list(chairman_collection.find())
+    deputyChairmen = list(deputy_chairman_collection.find())
+    councillors = list(db.councillors.find())
 
     return jsonify({
         "candidates": {

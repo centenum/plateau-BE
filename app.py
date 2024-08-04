@@ -10,6 +10,7 @@ import json
 from bson import ObjectId
 from datetime import datetime
 
+from encoder import MongoJsonEncoder
 from routes_accreditation import routes_accreditation
 from routes_authentication import routes_authentication
 from routes_general_data import routes_general_data
@@ -30,7 +31,8 @@ CORS(app)  # This will enable CORS for all routes
 swagger = Swagger(app)
 
 # Set the custom JSON encoder for the Flask app
-app.json_encoder = CustomJSONEncoder
+# app.json_encoder = CustomJSONEncoder
+app.json = MongoJsonEncoder(app)
 
 app.register_blueprint(routes_accreditation)
 app.register_blueprint(routes_authentication)
