@@ -5,7 +5,7 @@ from datetime import datetime
 class MongoJsonEncoder(DefaultJSONProvider):
     def default(self, obj):
         if isinstance(obj, datetime):
-            return obj.strftime("%Y-%m-%d %H:%M:%S")
+            return obj.strftime("%Y-%m-%dT%H:%M:%S")
         if isinstance(obj, ObjectId):
             return str(obj)
         return json_util.default(obj, json_util.CANONICAL_JSON_OPTIONS)

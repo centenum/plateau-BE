@@ -365,7 +365,10 @@ def create_chairman_with_deputy():
     chairman_data = data.get('chairman')
     deputy_data = data.get('deputyChairman')
 
+    chairman_data['createdAt'] = datetime.now(timezone.utc)
     chairman_data['in_review'] = True
+
+    deputy_data['createdAt'] = datetime.now(timezone.utc)
     deputy_data['in_review'] = True
 
     deputy = deputy_chairman_collection.insert_one(deputy_data)
@@ -441,6 +444,6 @@ def approve_deputy_chairman():
 def create_councillor():
     data = request.get_json()
     data['in_review'] = True
-
+    data['createdAt'] = datetime.now(timezone.utc)
     db.councillors.insert_one(data)
     return jsonify({'message': 'Councillor created successfully'}), 201
