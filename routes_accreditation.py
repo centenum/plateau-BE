@@ -278,3 +278,32 @@ def manual_accreditation_step2():
         'voterDetails': voter_details
     })
     return jsonify({'message': 'Voter accredited successfully'}), 201
+
+@routes_accreditation.route('/accreditation-dashboard', methods=['GET'])
+@swag_from({
+    'responses': {
+        200: {
+            'description': 'Accreditation dashboard',
+            'examples': {
+                'application/json': {
+                    'message': 'Accreditation dashboard',
+                    'accreditationRecords': [
+                        {
+                            'sessionId': 'unique-session-id',
+                            'status': 'completed',
+                            'voterDetails': {
+                                'vin': 'Voter Identification Number',
+                                'voterCardImage': 'Voter Card Image',
+                                'faceCaptureImage': 'Face Capture Image',
+                                'accreditedAt': 'Accreditation Date'
+                            }
+                        }
+                    ]
+                }
+            }
+        }
+    }
+})
+def accreditation_dashboard():
+    accreditation_records = list(accreditation_collection.find())
+    return jsonify({'message': 'Accreditation dashboard', 'accreditationRecords': accreditation_records}), 200
