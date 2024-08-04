@@ -93,7 +93,10 @@ def verify_sendchamp_otp(user, verification_code):
                     'email': {'type': 'string'},
                     'phoneNumber': {'type': 'string'},
                     'username': {'type': 'string'},
-                    'role': {'type': 'string', 'enum': ['APO', 'PO']}
+                    'role': {'type': 'string', 'enum': ['APO', 'PO']},
+                    'polling_unit': {'type': 'string'},
+                    'ward': {'type': 'string'},
+                    'lga': {'type': 'string'}
                 },
                 'required': ['firstName', 'lastName', 'email', 'phoneNumber']
             }
@@ -119,12 +122,20 @@ def register_user():
     email = data.get('email')
     role = data.get('role', 'APO')  # Default role is APO if not specified
     username = data.get('username')
+    polling_unit = data.get('polling_unit')
+    ward = data.get('ward')
+    lga = data.get('lga')
+
     password = generate_password()
     created_at = datetime.now(timezone.utc)
 
     # Check if the username or email already exists
     if users_collection.count_documents({'$or': [{'username': username}, {'email': email}]}):
         return jsonify({'message': 'Username or email already exists'}), 400
+    
+    # must have polling_unit, ward, lga
+    if not polling_unit or not ward or not lga:
+        return jsonify({'message': 'Please provide polling_unit, ward, and lga'}), 400
 
     # Hash the password with bcrypt
     hashed_password = bcrypt.hashpw(password.encode('utf-8'), bcrypt.gensalt()).decode('utf-8')
@@ -135,7 +146,10 @@ def register_user():
         'email': email,
         'password': hashed_password,
         'createdAt': created_at,
-        'role': role
+        'role': role,
+        "polling_unit": polling_unit,
+        "ward": ward,
+        "lga": lga
     }
 
     users_collection.insert_one(user)
