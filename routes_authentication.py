@@ -367,8 +367,8 @@ def create_chairman_with_deputy():
     chairman_data['in_review'] = True
     deputy_data['in_review'] = True
 
-    chairman_collection.insert_one(chairman_data)
-    deputy_chairman_collection.insert_one(deputy_data)
+    chairman_collection.insert_one({"chairman":chairman_data, "deputyChairman": deputy_data})
+    # deputy_chairman_collection.insert_one(deputy_data)
 
     return jsonify({'message': 'Chairman created successfully', 'password': "password"}), 201
 
