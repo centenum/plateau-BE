@@ -1,5 +1,6 @@
 import json
 from flask import Blueprint, request, jsonify
+from model import decode_image_to_ocr
 from config import db
 import uuid
 from datetime import datetime, timezone
@@ -76,9 +77,14 @@ def auto_accreditation_step1():
     voter_card_image = data.get('voterCardImage')
     
     # Verify voter's card image logic here
+    try:
+        verification_data = decode_image_to_ocr(voter_card_image)
+        accreditation_collection.update_one({'sessionId': session_id}, 
+                                        {'$set': {'voterCardImage': voter_card_image, 'step': 2}})
+        return jsonify({'message': 'Voter\'s card verified, proceed to face verification', 'sessionId': session_id}), 200
+    except Exception as e:
+        return jsonify({'message': "Something went wrong"}), 400
     
-    accreditation_collection.update_one({'sessionId': session_id}, {'$set': {'voterCardImage': voter_card_image, 'step': 2}})
-    return jsonify({'message': 'Voter\'s card verified, proceed to face verification', 'sessionId': session_id}), 200
 
 @routes_accreditation.route('/auto-accreditation/step2', methods=['POST'])
 @swag_from({
@@ -212,8 +218,14 @@ def manual_accreditation_step1():
         return jsonify({'message': 'Invalid VIN'}), 400
 
 def verify_vin(vin, polling_unit):
-    voter = voter_collection.find_one({'VIN': vin, 'polling_unit': polling_unit})
-    return voter
+    if len(vin) > 6:
+        voter = voter_collection.find_one({'VIN': vin, 'polling_unit': polling_unit})
+        return voter
+    elif len(vin) == 6:
+        voter = voter_collection.find_one({"VIN": {"$regex": f"{vin}$"}, 'polling_unit': polling_unit})
+        return voter
+    else:
+        return None
 
 @routes_accreditation.route('/manual-accreditation/step2', methods=['POST'])
 @swag_from({
