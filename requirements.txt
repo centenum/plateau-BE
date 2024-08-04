@@ -8,3 +8,5 @@ flasgger
 bcrypt
 pymongo
 python-dotenv
+cryptography
+marshmallow
