@@ -1,7 +1,7 @@
 import marshmallow as ma
 
 class CriminalOffenceSchema(ma.Schema):
-    arrested = ma.fields.Boolean()
+    tried = ma.fields.Boolean()
     optionConclusion = ma.fields.String()
 
 class LunacyInquirySchema(ma.Schema):
@@ -70,6 +70,9 @@ class DocumentSchema(ma.Schema):
     educationertificate = ma.fields.String()
     letterOfDisengagement = ma.fields.String()
     taxClearance = ma.fields.String()
+
+class PoliticalExperienceSchema(ma.Schema):
+    experience = ma.fields.String()
     
 
 class ChairmanSchema(ma.Schema):
@@ -104,6 +107,7 @@ class ChairmanSchema(ma.Schema):
     educationQualificationData = ma.fields.Nested(EducationExperienceSchema, many=True)
     lunacyInquiryTrial = ma.fields.Nested(LunacyInquirySchema, required=True)
     workExperienceData = ma.fields.Nested(WorkExperienceSchema, many=True)
+    politicalExperienceData = ma.fields.Nested(PoliticalExperienceSchema, many=True)
     oath = ma.fields.String()
     surname = ma.fields.String()
     pastClubsOrSocieties = ma.fields.String()
