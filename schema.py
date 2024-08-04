@@ -143,3 +143,9 @@ class CouncillorSchema(ma.Schema):
     sponsor = ma.fields.String()
     nominators = ma.fields.Nested(NominatorSchema, many=True)
     oath = ma.fields.String()
+    
+    
+class UpdateStatusSchema(ma.Schema):
+    _id = ma.fields.String(required=True)
+    status = ma.fields.String(required=True, validate=ma.validate.OneOf(['approved', 'rejected']))
+    

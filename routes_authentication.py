@@ -7,8 +7,8 @@ import bcrypt, requests
 from flasgger import swag_from
 
 from decorators import login_required, validate_schema
-from schema import CouncillorSchema, GenerateChairmanWithDeputySchema
-from bson import json_util
+from schema import CouncillorSchema, GenerateChairmanWithDeputySchema, UpdateStatusSchema
+from bson import ObjectId, json_util
 
 routes_authentication = Blueprint('authentication_routes', __name__)
 
@@ -426,20 +426,27 @@ def get_candidates():
     }), 200
 
 @routes_authentication.route('/approve-chairman', methods=['POST'])
+@validate_schema(UpdateStatusSchema())
 def approve_chairman():
     data = request.get_json()
-    chairman_id = data.get('chairman_id')
+    chairman_id = data.get('_id')
+    status = data.get('status')
 
-    chairman_collection.update_one({'_id': chairman_id}, {'$set': {'in_review': False, 'approved': True}})
+    chairman_collection.update_one({'_id': ObjectId(chairman_id)}, {'$set': {
+        'in_review': False, 'status': status
+    }})
     return jsonify({'message': 'Chairman approved'}), 200
 
 
 @routes_authentication.route('/approve-deputy-chairman', methods=['POST'])
+@validate_schema(UpdateStatusSchema())
 def approve_deputy_chairman():
     data = request.get_json()
-    deputy_chairman_id = data.get('deputy_chairman_id')
+    deputy_chairman_id = data.get('_id')
+    status = data.get('status')
 
-    deputy_chairman_collection.update_one({'_id': deputy_chairman_id}, {'$set': {'in_review': False, 'approved': True}})
+    deputy_chairman_collection.update_one({'_id': ObjectId(deputy_chairman_id)}, {'$set': 
+        {'in_review': False, 'status': status }})
     return jsonify({'message': 'Deputy Chairman approved'}), 200
 
 
