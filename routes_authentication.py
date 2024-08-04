@@ -337,7 +337,7 @@ def logout():
 
 @routes_authentication.route('/create-chairman', methods=['POST'])
 @validate_schema(GenerateChairmanWithDeputySchema())
-@login_required
+# @login_required
 def create_chairman_with_deputy():
     data = request.get_json()
     chairman_data = data.get('chairman')
@@ -354,7 +354,7 @@ def create_chairman_with_deputy():
 
 # Endpoint to get all chairmen
 @routes_authentication.route('/chairmen', methods=['GET'])
-@login_required
+# @login_required
 def get_chairmen():
     chairmen = list(chairman_collection.find(projection={'_id': False}))
     return jsonify({"chairmen": chairmen}), 200
@@ -362,14 +362,14 @@ def get_chairmen():
 
 # Endpoint to get all deputy chairmen
 @routes_authentication.route('/deputy-chairmen', methods=['GET'])
-@login_required
+# @login_required
 def get_deputy_chairmen():
     deputy_chairmen = list(deputy_chairman_collection.find(projection={'_id': False}))
     return jsonify({"deputy_chairmen": deputy_chairmen}), 200
 
 
 @routes_authentication.route('/approve-chairman', methods=['POST'])
-@login_required
+# @login_required
 def approve_chairman():
     data = request.get_json()
     chairman_id = data.get('chairman_id')
@@ -379,7 +379,7 @@ def approve_chairman():
 
 
 @routes_authentication.route('/approve-deputy-chairman', methods=['POST'])
-@login_required
+# @login_required
 def approve_deputy_chairman():
     data = request.get_json()
     deputy_chairman_id = data.get('deputy_chairman_id')
