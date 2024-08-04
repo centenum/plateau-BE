@@ -48,8 +48,8 @@ def get_political_parties():
     return jsonify({"political_parties": list(political_parties)})
 
 
-@swag_from('swagger_config.yml')
 @routes_general_data.route('/get_voter_data', methods=['GET'])
+@swag_from('swagger_docs/swagger_config.yml')
 def get_voters():
     polling_unit = request.args.get('polling_unit')
     ward = request.args.get('ward')
