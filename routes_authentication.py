@@ -205,9 +205,9 @@ def login():
     auth_collection.insert_one(auth_record)
 
     # Send OTP via sendChamp
-    phone_number = user.get('phoneNumber')
-    first_name = user['firstName']
-    reference, otp = send_champ_otp(phone_number, first_name)
+    # phone_number = user.get('phoneNumber')
+    # first_name = user['firstName']
+    # reference, otp = send_champ_otp(phone_number, first_name)
 
     users_collection.update_one({'_id': user['_id']}, {'$set': {'otp': otp, 'otp_reference': reference}})
 
