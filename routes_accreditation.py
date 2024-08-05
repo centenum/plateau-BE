@@ -341,15 +341,28 @@ def get_polling_units():
         polling_units = list(db.polling_units.find().limit(100))
         return jsonify({'pollingUnits': polling_units}), 200
     
+    totalAccredited = 0
+    totalRejected = 0
+    
     for unit in polling_units:
         # get accredited, get rejected
-        unit['accredited'] = accreditation_collection.count_documents({
+        accreditedVoters = accreditation_collection.count_documents({
             'polling_unit': unit.get('name'), 
             'status': 'completed'
         })
         
-        unit['rejected'] = accreditation_collection.count_documents({
+        unit['accredited'] = accreditedVoters
+        
+        totalAccredited += accreditedVoters
+        
+        rejectedVoters = accreditation_collection.count_documents({
             'polling_unit': unit.get('name'), 'status': 'rejected'
         })
     
-    return jsonify({'pollingUnits': polling_units}), 200
+        unit['rejected'] = rejectedVoters
+        
+        totalRejected += rejectedVoters
+        
+    return jsonify({
+        'pollingUnits': polling_units, 
+        "totalAccredited": totalAccredited, "totalRejected": totalRejected }), 200
