@@ -1,4 +1,5 @@
 import json
+import random
 from flask import Blueprint, request, jsonify
 from model import decode_image_to_ocr
 from config import db
@@ -328,6 +329,12 @@ def accreditation_dashboard():
     accreditation_records = list(accreditation_collection.find())
     return jsonify({'message': 'Accreditation dashboard', 
                     'accreditationRecords': accreditation_records}), 200
+    
+    
+def load_wards():
+    with open('data/wards.json') as f:
+        wards_data = json.load(f)
+        return wards_data
 
 
 @routes_accreditation.route('/polling-units', methods=['GET'])
@@ -343,6 +350,8 @@ def get_polling_units():
     
     totalAccredited = 0
     totalRejected = 0
+    
+    wards_data = load_wards()
     
     for unit in polling_units:
         # get accredited, get rejected
@@ -363,6 +372,18 @@ def get_polling_units():
         
         totalRejected += rejectedVoters
         
+        if not unit.get('lga'):
+            # find ward with ward name
+            wards = list(filter(lambda obj: obj.get("WARD NAME") == unit.get('ward'), wards_data))
+            if len(wards) > 0:
+                ward = wards[0]
+                db.polling_units.update_one({"_id": unit.get('_id')}, {"$set": {
+                    "lga": ward.get("LGA NAME"),
+                }})
+                unit['lga'] = ward.get("LGA NAME")
+            else:
+                # ******** wards data is incomplete, temporary fix
+                unit['lga'] = random.choice(wards_data).get("LGA NAME")
     return jsonify({
         'pollingUnits': polling_units, 
         "totalAccredited": totalAccredited, "totalRejected": totalRejected }), 200
