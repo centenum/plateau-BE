@@ -416,7 +416,21 @@ def list_filter(iter, status):
 
 @routes_authentication.route('/candidates', methods=['GET'])
 def get_candidates():
-    chairmen = list(chairman_collection.find())
+    pipeline = [
+        {
+            "$lookup": {
+                "from": "deputy_chairman",
+                "localField": "deputy",
+                "foreignField": "_id",
+                "as": "deputy",
+            },
+        },
+        {
+            "$unwind": "$deputy"
+        }
+    ]
+    
+    chairmen = list(chairman_collection.aggregate(pipeline))
     deputyChairmen = list(deputy_chairman_collection.find())
     councillors = list(db.councillors.find())
 
