@@ -367,6 +367,8 @@ def get_polling_units():
         rejectedVoters = accreditation_collection.count_documents({
             'polling_unit': unit.get('name'), 'status': 'rejected'
         })
+        
+        unit['pollingUnitOfficer'] = db.users.find_one({"polling_unit": unit.get('name')})
     
         unit['rejected'] = rejectedVoters
         
