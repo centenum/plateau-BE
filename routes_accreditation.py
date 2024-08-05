@@ -383,10 +383,12 @@ def get_polling_units():
                 unit['lga'] = ward.get("LGA NAME")
             else:
                 # ******** wards data is incomplete, temporary fix
-                unit['lga'] = random.choice(wards_data).get("LGA NAME")
+                random_lga = random.choice(wards_data).get("LGA NAME")
+                unit['lga'] = random_lga
                 db.polling_units.update_one({"_id": unit.get('_id')}, {"$set": {
-                    "lga": random.choice(wards_data).get("LGA NAME"),
+                    "lga": random_lga,
                 }})
+                
     return jsonify({
         'pollingUnits': polling_units, 
         "totalAccredited": totalAccredited, "totalRejected": totalRejected }), 200
