@@ -411,13 +411,30 @@ def get_deputy_chairmen():
     return jsonify({"deputy_chairmen": deputy_chairmen}), 200
 
 
+def list_filter(iter, status):
+    return len(list(filter(lambda x: x.get('status') == status, iter)))
+
 @routes_authentication.route('/candidates', methods=['GET'])
 def get_candidates():
     chairmen = list(chairman_collection.find())
     deputyChairmen = list(deputy_chairman_collection.find())
     councillors = list(db.councillors.find())
 
+    totalSubmissions = len(chairmen) + len(deputyChairmen) + len(councillors)
+    submissionsApproved = list_filter(chairmen, "approved") + list_filter(deputyChairmen, "approved") \
+    + list_filter(councillors, "approved")
+
+    submissionsDeclined = list_filter(chairmen, "rejected") + list_filter(deputyChairmen, "rejected") \
+    + list_filter(councillors, "rejected")
+
+    submissionsInReview = list_filter(chairmen, "submitted") + list_filter(deputyChairmen, "submitted") \
+    + list_filter(councillors, "submitted")
+
     return jsonify({
+        "totalSubmissions": totalSubmissions,
+        "submissionsApproved": submissionsApproved,
+        "submissionsDeclined": submissionsDeclined,
+        "submissionsInReview": submissionsInReview,
         "candidates": {
             "chairmen": chairmen, 
             "deputyChairmen": deputyChairmen, 

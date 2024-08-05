@@ -2,6 +2,10 @@ import os
 
 from openai import OpenAI
 
+from dotenv import load_dotenv
+
+load_dotenv()  # This loads environment variables from .env file
+
 OPENAI_KEY = os.getenv("OPENAI_KEY")
 
 # Set up your OpenAI API key
