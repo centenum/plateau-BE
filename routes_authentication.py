@@ -448,11 +448,21 @@ def approve_chairman():
     data = request.get_json()
     chairman_id = data.get('_id')
     status = data.get('status')
+    
+    chairman = chairman_collection.find_one({"_id": ObjectId(chairman_id)})
+    
+    if not chairman:
+        return jsonify({"message": "chairman not found"}), 404
 
     chairman_collection.update_one({'_id': ObjectId(chairman_id)}, {'$set': {
         'in_review': False, 'status': status
     }})
-    return jsonify({'message': 'Chairman approved'}), 200
+    
+    deputy_chairman_collection.update_one({"_id": chairman.get('deputy')}, {'$set': {
+        'in_review': False, 'status': status
+    }})
+    
+    return jsonify({'message': 'Chairman and deputy approved'}), 200
 
 
 @routes_authentication.route('/approve-deputy-chairman', methods=['POST'])
