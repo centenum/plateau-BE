@@ -430,7 +430,11 @@ def get_candidates():
         }
     ]
     
-    chairmen = list(chairman_collection.aggregate(pipeline))
+    chairmen = list(chairman_collection.find())
+
+    for man in chairmen:
+        man['deputy'] = deputy_chairman_collection.find_one({"_id": man['deputy']})
+
     deputyChairmen = list(deputy_chairman_collection.find())
     councillors = list(db.councillors.find())
 
