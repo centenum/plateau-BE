@@ -290,7 +290,16 @@ def manual_accreditation_step2():
         'accreditedAt': datetime.now(timezone.utc)
     }
 
-    voter = voter_collection.find_one({'VIN': vin})
+
+    voter = voter_collection.find_one({
+        '$or': [
+            {'VIN': vin},
+            {'VIN': {'$regex': f"{vin}$"}}
+        ]
+    })
+
+    if not voter:
+        return jsonify({'message': 'Voter not found'}), 404
     
     accreditation_collection.insert_one({
         'status': 'completed',
