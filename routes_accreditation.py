@@ -38,7 +38,8 @@ def start_auto_accreditation():
         'sessionId': session_id,
         'step': 1,
         'status': 'in-progress',
-        'createdAt': datetime.now(timezone.utc)
+        'createdAt': datetime.now(timezone.utc),
+        "type": "auto"
     })
     return jsonify({'message': 'Auto accreditation started', 'sessionId': session_id}), 201
 
@@ -294,7 +295,8 @@ def manual_accreditation_step2():
     accreditation_collection.insert_one({
         'status': 'completed',
         'voterDetails': voter_details,
-        "polling_unit": voter.get('polling_unit')
+        "polling_unit": voter.get('polling_unit'),
+        "type": "manual"
     })
 
     # add accreditation record with polling unit 
@@ -340,6 +342,13 @@ def load_wards():
 @routes_accreditation.route('/polling-units', methods=['GET'])
 def get_polling_units():
     polling_units = list(db.polling_units.find().limit(100))
+    totalManualAccreditations = accreditation_collection.count_documents({
+        'type': 'manual'
+    })
+
+    totalAutoAccreditations = accreditation_collection.count_documents({
+        'type': 'auto'
+    })
     if len(polling_units) == 0:
         # dump polling unit data 
         with open('data/polling_units.json') as f:
@@ -395,6 +404,6 @@ def get_polling_units():
         'pollingUnits': polling_units, 
         "totalAccredited": totalAccredited, 
         "totalRejected": totalRejected,
-        "totalManual": 0,
-        "totalAuto": 0
+        "totalManual": totalManualAccreditations,
+        "totalAuto": totalAutoAccreditations
     }), 200
