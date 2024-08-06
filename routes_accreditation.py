@@ -94,7 +94,7 @@ def auto_accreditation_step1():
             }})
         return jsonify({'message': 'Voter\'s card verified, proceed to face verification', 'sessionId': session_id}), 200
     except Exception as e:
-        return jsonify({'message': "Something went wrong"}), 400
+        return jsonify({'message': str(e)}), 400
     
 
 @routes_accreditation.route('/auto-accreditation/step2', methods=['POST'])
