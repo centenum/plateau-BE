@@ -491,6 +491,18 @@ def approve_deputy_chairman():
     return jsonify({'message': 'Deputy Chairman approved'}), 200
 
 
+@routes_authentication.route('/approve-councillor', methods=['POST'])
+@validate_schema(UpdateStatusSchema())
+def approve_councillor():
+    data = request.get_json()
+    councillor_id = data.get('_id')
+    status = data.get('status')
+
+    db.councillors.update_one({'_id': ObjectId(councillor_id)}, {'$set': 
+        {'in_review': False, 'status': status }})
+
+    return jsonify({'message': 'Councillor approved'}), 200
+
 @routes_authentication.route('/councillors', methods=['POST'])
 @validate_schema(CouncillorSchema())
 def create_councillor():
