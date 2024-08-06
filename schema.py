@@ -144,6 +144,7 @@ class CouncillorSchema(ma.Schema):
     sponsor = ma.fields.String()
     nominators = ma.fields.Nested(NominatorSchema, many=True)
     oath = ma.fields.String()
+    otherNationality = ma.fields.String()
     
     
 class UpdateStatusSchema(ma.Schema):
