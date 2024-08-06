@@ -119,6 +119,7 @@ class ChairmanSchema(ma.Schema):
     sponsor = ma.fields.String()
     nominators = ma.fields.Nested(NominatorSchema, many=True)
     documents = ma.fields.Nested(DocumentSchema)
+    otherNationality = ma.fields.String()
 
 
 class GenerateChairmanWithDeputySchema(ma.Schema):

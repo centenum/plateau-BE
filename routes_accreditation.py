@@ -393,4 +393,8 @@ def get_polling_units():
                 
     return jsonify({
         'pollingUnits': polling_units, 
-        "totalAccredited": totalAccredited, "totalRejected": totalRejected }), 200
+        "totalAccredited": totalAccredited, 
+        "totalRejected": totalRejected,
+        "totalManual": 0,
+        "totalAuto": 0
+    }), 200
