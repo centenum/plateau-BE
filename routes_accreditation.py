@@ -341,7 +341,7 @@ def load_wards():
 
 @routes_accreditation.route('/polling-units', methods=['GET'])
 def get_polling_units():
-    polling_units = list(db.polling_units.find().limit(100))
+    polling_units = list(db.polling_units.find().limit(50))
     totalManualAccreditations = accreditation_collection.count_documents({
         'type': 'manual'
     })
@@ -354,7 +354,7 @@ def get_polling_units():
         with open('data/polling_units.json') as f:
             data = json.load(f)
             db.polling_units.insert_many(data)
-        polling_units = list(db.polling_units.find().limit(100))
+        polling_units = list(db.polling_units.find().limit(50))
         return jsonify({'pollingUnits': polling_units}), 200
     
     totalAccredited = 0
