@@ -83,7 +83,7 @@ def auto_accreditation_step1():
         verification_data = decode_image_to_ocr(voter_card_image)
         verification_data = json.loads(verification_data)
 
-        print(verification_data, verification_data.get('VIN', '').replace(' ', ''))
+        # print(verification_data, verification_data.get('VIN', '').replace(' ', ''))
         if 'VIN' not in verification_data:
             return jsonify({'message': 'Invalid voter\'s card'}), 400
         
