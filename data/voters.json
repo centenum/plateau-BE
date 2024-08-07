@@ -1,0 +1,1856 @@
+[
+    {
+        "success": true,
+        "VIN": "90F5AE896029570221",
+        "DOB": "1989",
+        "full_name": "IKEZE, TOCHUKWU B.",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "INC22000000021496577",
+        "DOB": "2003",
+        "full_name": "IKEWELUGO, CHIKAMSO N.",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "INC22000000200047137",
+        "DOB": "1998",
+        "full_name": "IKEWELUGO, ODIRA C.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "905FAE89G0C296215073",
+        "DOB": "1986",
+        "full_name": "ILO EGBU, UCHE E.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE896C295887679",
+        "DOB": "1981",
+        "full_name": "JOHN, DORCAS",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "VIN": "90F5AEB96C296056258",
+        "DOB": "1982",
+        "full_name": "JOHN, LYDIA A.",
+        "success": true,
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "VIN": "90F5AEB9C6296914681",
+        "DOB": "1992",
+        "full_name": "JOHN, NANCY C.",
+        "success": true,
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "905FAEB96295527673",
+        "DOB": "1980",
+        "full name": "JOHN, NAOMI",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE89G0C295794636",
+        "DOB": "1985",
+        "full name": "JOHN, STEPHANIE K.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB90C296119980",
+        "DOB": "1985",
+        "full name": "ADAMS, RAYMOND",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE89G0C296310425",
+        "DOB": "1978",
+        "full_name": "ADAMS, ZARE",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "INC21000000004555468",
+        "DOB": "1995",
+        "full name": "ADEMU, OWOICHO T.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB96C295522358",
+        "DOB": "1958",
+        "full_name": "ADAMU, JOSIAH",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE8B96296556164",
+        "DOB": "1967",
+        "full name": "ADAMU, MAITALA Y.",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "905FAE896C295444941",
+        "DOB": "1975",
+        "full_name": "JOHN, UMARU C.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB9G0295889153",
+        "DOB": "1983",
+        "full_name": "JOHN, VICTOTIA",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE896C296299933",
+        "DOB": "1988",
+        "full_name": "JOSEPH, PETER",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB906296037839",
+        "DOB": "1991",
+        "full name": "JOSEPH, BLESSING",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB906296039381",
+        "DOB": "1994",
+        "full name": "JOSEPH, CHARLES",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "905FAEB9C0295362432",
+        "DOB": "1963",
+        "full_name": "ILOKHOR, SUNDAY",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB90C296307689",
+        "DOB": "1965",
+        "full_name": "IMOKA, FRANCIS O.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB9G0C296812181",
+        "DOB": "1992",
+        "full_name": "ILOKHOR, PEACE",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "905FAE896296832484",
+        "DOB": "1992",
+        "full name": "JAMES, PRINCE",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "905FAEB9G0296562302",
+        "DOB": "1979",
+        "full_name": "JAMES, RUTH K.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AF004519817286",
+        "DOB": "1998",
+        "full_name": "JOEL, AKU I.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F581E775519897237",
+        "DOB": "1999",
+        "full name": "JAMES, STEPHANIE M.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE890C296737510",
+        "DOB": "1991",
+        "full_name": "JOEL, ANONDE",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB9G6296811854",
+        "DOB": "1992",
+        "full name": "JAMES, STEPHEN",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "VIN": "90F5AEB90C29618359",
+        "DOB": "1975",
+        "full name": "JOHN, ABIGAIL",
+        "success": true,
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE89C026921574",
+        "DOB": "1978",
+        "full_name": "JOHN, CHICO H.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "INC22000000023456164",
+        "DOB": "2003",
+        "full_name": "IKE, PRINCESS C.",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "INC22000000024492473",
+        "DOB": "2000",
+        "full_name": "IFEZUOKE, SUCCESS",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "INC22000000030444932",
+        "DOB": "2003",
+        "full_name": "IKECHUKWU, CHIDERA B.",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "905FAEB96C295702086",
+        "DOB": "1955",
+        "full_name": "IGBOH, MICHAEL M.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE8B0C295364997",
+        "DOB": "1992",
+        "full_name": "IKECHUKWU, IVOH C.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE89C0296820234",
+        "DOB": "1991",
+        "full_name": "IKEDIALA, IKENNA",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "VIN": "905FAF0044515759461",
+        "DOB": "1983",
+        "full_name": "IDEM, EMEM N.",
+        "success": true,
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AFBDTF535535483",
+        "DOB": "2001",
+        "full_name": "IBRAHIM, LOIS E.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F5808333296480725",
+        "DOB": "1970",
+        "full name": "IBRAHIM, RABECCA",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "INC22000000026144875",
+        "DOB": "2003",
+        "full_name": "IFEANYI, CHIOMA P.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "VIN": "90F5AEB96C295456556",
+        "DOB": "1957",
+        "full_name": "IZANG, VOU M.",
+        "success": true,
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE896C296489420",
+        "DOB": "1930",
+        "full_name": "JAH, CHOLLOM",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB96C296901140",
+        "DOB": "1982",
+        "full_name": "JACOB, EJIKE",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "905FAEB9GC295271975",
+        "DOB": "1980",
+        "full_name": "JUGU, ROSE Y.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "905FAE8960295351539",
+        "DOB": "1949",
+        "full_name": "FARAUTA, JOSEPH S.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "VIN": "905FAE8960259627408",
+        "DOB": "1990",
+        "full name": "FIEVETE, IBEKWE",
+        "success": true,
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE89BC29611930",
+        "DOB": "1965",
+        "full_name": "GAMBO, WAYA",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "905FAE8960296221741",
+        "DOB": "1980",
+        "full_name": "ADIGHILE, KELECHI M.",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "905FAEB9G6295702407",
+        "DOB": "1975",
+        "full_name": "ADO, YOP",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "INC2200000002285900",
+        "DOB": "2002",
+        "full_name": "AFAM, MERCY E.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE89629603222",
+        "DOB": "1992",
+        "full_name": "AGBO, JEREMIAH",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90FB11312415878598",
+        "DOB": "1973",
+        "full_name": "AGABUS, PWANAGBA",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "905FAE89629954570",
+        "DOB": "1959",
+        "full_name": "AGBO, ROMANUS U.",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "90F5B1FCC499671355",
+        "DOB": "1993",
+        "full_name": "AGWOM, DORIS",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB96C296914956",
+        "DOB": "1966",
+        "full_name": "AGBONMENLO, OSE",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F58180F4295451320",
+        "DOB": "1991",
+        "full_name": "AGWU, ONYEKACHI U.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "905FAE8906259876521",
+        "DOB": "1970",
+        "full_name": "AGHANYA, IFEANYI T.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE89C296826198",
+        "DOB": "1984",
+        "full_name": "AJAGU, GLORIA",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB906259953701",
+        "DOB": "1989",
+        "full name": "AGUKU, EDWIN T.",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE896C295361473",
+        "DOB": "1964",
+        "full name": "AJAH, JULIANAH",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5B03780295540289",
+        "DOB": "1985",
+        "full_name": "GODWIN, NGOZI",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB96C296210754",
+        "DOB": "1958",
+        "full_name": "KEFAS, GAROS D.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "VIN": "90F5AEB96C295435716",
+        "DOB": "1973",
+        "full_name": "KINGE, ZAKARIYA",
+        "success": true,
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "71B3D8B2435312297",
+        "DOB": "1998",
+        "full_name": "KELVIN, EDWARD K.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5811312415968694",
+        "DOB": "1976",
+        "full_name": "HABILA, KEFAS N.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB90C29618054",
+        "DOB": "1976",
+        "full name": "HWARA, LAMI",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F5819AD3295950110",
+        "DOB": "1983",
+        "full_name": "IBEH, MALACHY",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "INC22000000018094002",
+        "DOB": "2003",
+        "full_name": "IBEKEWE, CHIMEZIE E.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "905FAE896C296119098",
+        "DOB": "1978",
+        "full_name": "HENRY, LUKA G.",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "90F581F311295530507",
+        "DOB": "1983",
+        "full name": "LINUS, ROSELINE",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F580D0D9271895421",
+        "DOB": "1999",
+        "full_name": "AKPUTA, ESTHER C.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "INC22000000026810338",
+        "DOB": "1974",
+        "full_name": "AKWUEGBU, BENEDICT",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "905FAF6243296046371",
+        "DOB": "1984",
+        "full_name": "AKPUTA, IFEOMA N.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB90C296000830",
+        "DOB": "1989",
+        "full name": "ALAMBA, SARAH",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB9G6296559483",
+        "DOB": "1992",
+        "full_name": "AKRA, ARABELL C.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB906295521959",
+        "DOB": "1954",
+        "full name": "AKUJIOBI, CHIKWE C.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "VIN": "90F5AE89C296812777",
+        "DOB": "1961",
+        "full_name": "AKABUEZE, CHIJOKE",
+        "success": true,
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "VIN": "905FAEB96C296397459",
+        "DOB": "1970",
+        "full name": "AJUTORA, CLEMENT C.",
+        "success": true,
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "905FAE89C295434530",
+        "DOB": "1962",
+        "full name": "LAJE, VICTOR S.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "VIN": "90F5AEB96C29694008",
+        "DOB": "1983",
+        "full_name": "LABWAT, JULIANA D.",
+        "success": true,
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "VIN": "905FAEB96C29590095",
+        "DOB": "1978",
+        "full_name": "LABWAT, KANENG R.",
+        "success": true,
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "VIN": "90F5AEB906295455441",
+        "DOB": "1973",
+        "full_name": "LABWAT, SARAH N.",
+        "success": true,
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "905FAE8966296816245",
+        "DOB": "1971",
+        "full_name": "GUFUL, SARAH J.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F8B099F6294003343",
+        "DOB": "1985",
+        "full_name": "GYANG, EZIKIEL D.",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "VIN": "90F5AE89C29600148",
+        "DOB": "1986",
+        "full name": "GYANG, GRACE",
+        "success": true,
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "VIN": "90F5B1F8E295614534",
+        "DOB": "1989",
+        "full name": "GWAMNA, DORCAS A.",
+        "success": true,
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "VIN": "90F5AEB9C0296652417",
+        "DOB": "1979",
+        "full name": "GWAMNA, VICTOR D.",
+        "success": true,
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "905FAF250250513235",
+        "DOB": "1972",
+        "full_name": "BOK, KACHOLLON H.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE89C629610327",
+        "DOB": "1988",
+        "full name": "BUJI, MATTHEW",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "905FAF2502500513567",
+        "DOB": "1994",
+        "full_name": "BOK, THEODORA N.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "VIN": "90F5AE89C0295521557",
+        "DOB": "1970",
+        "full_name": "BUKAR, DANJUMA U.",
+        "success": true,
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB96C295799145",
+        "DOB": "1955",
+        "full_name": "BOT, LADI",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "VIN": "90F5AE896C295366291",
+        "DOB": "1969",
+        "full name": "DANBOYI, ELIZABETH C.",
+        "success": true,
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB96C296912095",
+        "DOB": "1988",
+        "full_name": "DALYOP, VERONICA",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "905FAE896C296207208",
+        "DOB": "1968",
+        "full name": "DANIEL, EMMANUEL A.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "905FAE896C295444112",
+        "DOB": "1988",
+        "full_name": "EDEH, MONICA I.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "VIN": "90F5813045510319904",
+        "DOB": "1999",
+        "full_name": "EDWARD, EJI",
+        "success": true,
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "VIN": "90F5B1E775518739877",
+        "DOB": "1965",
+        "full_name": "EGBUSIM, SYLVIA O.",
+        "success": true,
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE890C295332597",
+        "DOB": "1986",
+        "full name": "EGOTANWA, ROSE C.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "VIN": "905FAEB9C296037022",
+        "DOB": "1983",
+        "full_name": "DUSU, BLESSING I.",
+        "success": true,
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "INC22000000029590859",
+        "DOB": "1998",
+        "full_name": "EBELE, KOSI R.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB90C295364709",
+        "DOB": "1973",
+        "full name": "EBOH, JECINTA N.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB9C296315437",
+        "DOB": "1970",
+        "full name": "DACHOM, SUNDAY",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "VIN": "90F5AEB9C0296733768",
+        "DOB": "1991",
+        "full name": "CLEMENT, DENNIS",
+        "success": true,
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB90C295608440",
+        "DOB": "1978",
+        "full name": "DACHUNG, DUNG",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "905FAEB906296295942",
+        "DOB": "1980",
+        "full_name": "CORNELIUS, EKENE C.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "INC22000000015474055",
+        "DOB": "1999",
+        "full_name": "DAJAN, HANATU D.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE89C029618881",
+        "DOB": "1992",
+        "full_name": "DAKUP, FAITH",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE896C296040861",
+        "DOB": "1984",
+        "full name": "BENARD, LUCY O.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB9C26399422",
+        "DOB": "1992",
+        "full_name": "BITRUS, CHRISTIANA",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "VIN": "90F5806EB929624956",
+        "DOB": "1992",
+        "full name": "BENEDICT, HELEN",
+        "success": true,
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "INC22000000025906133",
+        "DOB": "1982",
+        "full_name": "BENJAMIN, SIMON D.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AF2302500512798",
+        "DOB": "1996",
+        "full name": "BOK, JEMIMAH Y.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "VIN": "905FAEB906295264128",
+        "DOB": "1963",
+        "full name": "EGWELE, BONIFACE O.",
+        "success": true,
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "905FAEB9G0C296213016",
+        "DOB": "1979",
+        "full_name": "EJEH, PETER I.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE89C0295524278",
+        "DOB": "1989",
+        "full name": "EJIMBE, BERNICE N.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "VIN": "90F5AEB96C296810474",
+        "DOB": "1988",
+        "full name": "EJEMBI, ANDY P.",
+        "success": true,
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE89629553224",
+        "DOB": "1992",
+        "full_name": "EJIMBE, JENNIFER C.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "905FAE8963296491007",
+        "DOB": "1988",
+        "full_name": "EJIER, CHUKWUJEKWU",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F5A8960296491843",
+        "DOB": "1992",
+        "full_name": "EJIOFOR, UGOCHI P.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "905FAE896295512008",
+        "DOB": "1960",
+        "full_name": "DANIEL, EMMANUEL A.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "905FAE89C295280889",
+        "DOB": "1972",
+        "full_name": "DANIEL, TALATU D.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "905823809530744819",
+        "DOB": "1997",
+        "full_name": "DANIEL, GODSWILL O.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE896C296307393",
+        "DOB": "1979",
+        "full name": "DANJUMA, LADI L.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "905FAEB906296291761",
+        "DOB": "1980",
+        "full_name": "DANIEL, MARY O.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE896G296538995",
+        "DOB": "1984",
+        "full name": "DAUDA, YAKUBU S.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F58130A5511528737",
+        "DOB": "1999",
+        "full name": "DAVID, HENRIETTA I.",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB96C296564821",
+        "DOB": "1992",
+        "full_name": "DAVID, PHILIP",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "905FAE809C296133276",
+        "DOB": "1992",
+        "full_name": "EKELEME, MERCY C.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "INC22000000018572128",
+        "DOB": "1999",
+        "full_name": "EKERUKE, UDUAK B.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE896C295280176",
+        "DOB": "1970",
+        "full_name": "EKPENYONG, GLORY A.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "905FAEB960296294790",
+        "DOB": "1977",
+        "full_name": "EKETE, AMOS N.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "INC22000000025765594",
+        "DOB": "2004",
+        "full_name": "ELEKWACHI, PRAISE O.",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB96C296309394",
+        "DOB": "1991",
+        "full_name": "EZE, TOCHUKWU",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "INC22000000018761857",
+        "DOB": "1996",
+        "full_name": "EZEAGU, SAMUEL I.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB90C295524491",
+        "DOB": "1985",
+        "full name": "EZEANOCHIE, CHIBUZO C.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB9C0296212482",
+        "DOB": "1978",
+        "full_name": "CHUKWUMA, BLESSING R.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "INC22000000018393769",
+        "DOB": "1985",
+        "full name": "CHIZOBA, HAPPINESS A.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "INC22000000023806108",
+        "DOB": "1982",
+        "full_name": "CHOJI, DAUDA G.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "VIN": "90F5AEB90C295430050",
+        "DOB": "1960",
+        "full_name": "CHOLLON, EMMANUEL",
+        "success": true,
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB96C296396193",
+        "DOB": "1967",
+        "full name": "CHOLLOM, PAM C.",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "905FAE896C295779707",
+        "DOB": "1944",
+        "full name": "ENWEREM, VIGINA C.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "905FAEB96C295715815",
+        "DOB": "1986",
+        "full_name": "ENWEREUZOR, NGOZI B.",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE8D96295781996",
+        "DOB": "1990",
+        "full_name": "CHANDUGUN, NANBAM D.",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE896C296730073",
+        "DOB": "1991",
+        "full_name": "CHIBUNDU, CHINAZA",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "906FAEB09C296811582",
+        "DOB": "1992",
+        "full name": "ELOM, CHINEYE",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "VIN": "90F581C252510832062",
+        "DOB": "1992",
+        "full_name": "ELEM, FRANCISCA N.",
+        "success": true,
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "905FAF0044520003954",
+        "DOB": "1995",
+        "full_name": "ELEM, OBUMNEME J.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB90C295686160",
+        "DOB": "1983",
+        "full name": "ELOM, JECITA",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE89G0296308451",
+        "DOB": "1982",
+        "full name": "ELWELUANI, STELLA",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "VIN": "90F581B807518005930",
+        "DOB": "2000",
+        "full_name": "ELISEUS, MICHAEL",
+        "success": true,
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "905FAE89C2957908",
+        "DOB": "1987",
+        "full_name": "EMECHIE, PETER C.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "71BC3D08824535533449",
+        "DOB": "1980",
+        "full_name": "EMMANUEL, NAANDOM P.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F581FFAC510306245",
+        "DOB": "1999",
+        "full_name": "EMUROTU, DAVID J.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE896C296395247",
+        "DOB": "1985",
+        "full name": "CHIMEREZE, MARY C.",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "90F58A1301519890338",
+        "DOB": "1984",
+        "full name": "CHIKWE, CHINEDU C.",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEDB0C513333410",
+        "DOB": "1999",
+        "full_name": "EZENNAYA, GLORIA C.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "VIN": "INC22000000021283607",
+        "DOB": "2001",
+        "full name": "EZEH, VICTORIA N.",
+        "success": true,
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AF8404515670768",
+        "DOB": "1999",
+        "full name": "AMOS, CYNTHIA H.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE896296490646",
+        "DOB": "1991",
+        "full name": "AMOS, RIFKATU R.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "VIN": "90F5AE8960296391489",
+        "DOB": "1988",
+        "full name": "ANALE, LILIAN",
+        "success": true,
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB90629612532",
+        "DOB": "1988",
+        "full_name": "AMINU, BALA R.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "905FAE896C295275506",
+        "DOB": "1947",
+        "full_name": "ANAOBI, LEAH A.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "VIN": "90F5AEB9C295778447",
+        "DOB": "1935",
+        "full name": "ANENE, SUNDAY",
+        "success": true,
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "905FAE896C296317990",
+        "DOB": "1981",
+        "full name": "ANI, CHARITY C.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "INC22000000025712243",
+        "DOB": "2000",
+        "full_name": "ANCHE, OLUCHI J.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "71B3D08824553444638",
+        "DOB": "1989",
+        "full_name": "ANI, IFEOMA E.",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "71B3CD0B24535453132",
+        "DOB": "1982",
+        "full_name": "EZIKE, CHISOM E.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "VIN": "90F58I1E77552056946",
+        "DOB": "1995",
+        "full_name": "EZEOFOR, VERONICA V.",
+        "success": true,
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "905FAE8960295886777",
+        "DOB": "1986",
+        "full_name": "Ezeokeke, Blessing E.",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AD17CC416416536",
+        "DOB": "1997",
+        "full_name": "ANIZOR, OGADINMA H.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB96C295525715",
+        "DOB": "1984",
+        "full name": "BABUJAYE, MARY",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "905FAEB96C29605543",
+        "DOB": "1980",
+        "full name": "AZIMAZI, MARTINS",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB90C295274771",
+        "DOB": "1966",
+        "full_name": "BAKO, LADI S.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "905FAE8960296293650",
+        "DOB": "1940",
+        "full name": "BAKO, SARKI C.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "VIN": "INC22000000030398251",
+        "DOB": "1982",
+        "full_name": "BELLO, MIMI B.",
+        "success": true,
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "INC22000000015931659",
+        "DOB": "1997",
+        "full_name": "BEN, KELECHI",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "VIN": "90F5AE8C9C296214183",
+        "DOB": "1955",
+        "full_name": "ATANG, MUSA",
+        "success": true,
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "71B3D8B2435448743",
+        "DOB": "2000",
+        "full_name": "AUGUSTINE, EMMANUEL E.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB90C296135747",
+        "DOB": "1988",
+        "full_name": "AUSTINE, ANAKWE",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB960295440778",
+        "DOB": "1991",
+        "full_name": "AWAZIEM, CHIDOZIE C.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "VIN": "90F5AF0044518781803",
+        "DOB": "1986",
+        "full name": "AYUBA, UMUNGAI A.",
+        "success": true,
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "905FAE896C29688551",
+        "DOB": "1942",
+        "full_name": "AYA, LARABA",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "VIN": "90F5AEB9C29657334",
+        "DOB": "1992",
+        "full_name": "AZGA, AMOS A.",
+        "success": true,
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "VIN": "90F5AF0044519818932",
+        "DOB": "1995",
+        "full_name": "DIKE, CHINONSO A.",
+        "success": true,
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "VIN": "905FAE8960295270274",
+        "DOB": "1981",
+        "full_name": "DEME, NAOMI C.",
+        "success": true,
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB9C0295620740",
+        "DOB": "1957",
+        "full_name": "DUNG, ELIZABETH I.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "VIN": "90F5AE89C0296748336",
+        "DOB": "1991",
+        "full name": "DUNG, GLORIA",
+        "success": true,
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE896C296038535",
+        "DOB": "1945",
+        "full name": "DAVOU, CECILIA",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB9C259451368",
+        "DOB": "1978",
+        "full_name": "DAVOU, GEORGE J.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5B18743512739382",
+        "DOB": "1986",
+        "full_name": "ANYANWU, UGOCHI M.",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB96C29568881",
+        "DOB": "1972",
+        "full_name": "ARING, SIMON B.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "905FAEB96C296739634",
+        "DOB": "1992",
+        "full_name": "ARING, ANTHONY",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE8960295881831",
+        "DOB": "1987",
+        "full_name": "ALEX, IFY",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "VIN": "905FAEB90C295872906",
+        "DOB": "1992",
+        "full name": "ALOZIEUWA, ANTHONY C.",
+        "success": true,
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE896C295530865",
+        "DOB": "1992",
+        "full name": "ALU, EMMANUEL K.",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "INC22000000022998100",
+        "DOB": "1989",
+        "full name": "ALU, NOEL E.",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE896C296392802",
+        "DOB": "1987",
+        "full name": "ALOO, FRIDAY I.",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "VIN": "90F5AEB9C0296134348",
+        "DOB": "1978",
+        "full name": "AMADI, SAMUEL I.",
+        "success": true,
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "INC22000000018455962",
+        "DOB": "2000",
+        "full name": "AMAH, GRACE C.",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "905FAEB96C296295344",
+        "DOB": "1977",
+        "full_name": "AMADU, DANJUMA A.",
+        "polling_unit": "ANG_MISSION_1",
+        "ward": "GINDIRI 1",
+        "lga": "MANGU"
+    },
+    {
+        "success": true,
+        "VIN": "INC22000000018456304",
+        "DOB": "2000",
+        "full name": "AMAH, GRACE C.",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "905FAE896295274506",
+        "DOB": "1982",
+        "full_name": "INUBIWON, KEHINDE R.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AEB90C259872562",
+        "DOB": "1992",
+        "full name": "ISHAKU, JEREMIAH",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    },
+    {
+        "success": true,
+        "VIN": "90F5806738522833164",
+        "DOB": "1990",
+        "full_name": "IROMARA, IFEOMA M.",
+        "polling_unit": "T_C_N_N",
+        "ward": "DU",
+        "lga": "JOS_SOUTH"
+    },
+    {
+        "success": true,
+        "VIN": "90F5AE890C295801720",
+        "DOB": "1970",
+        "full_name": "ISHAKU, REBECCA N.",
+        "polling_unit": "SHILUR_MARKET",
+        "ward": "SALUWE",
+        "lga": "WASE"
+    }
+]

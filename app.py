@@ -1,22 +1,10 @@
 from flask import Flask, render_template, request, jsonify
 from werkzeug.security import generate_password_hash, check_password_hash
 from flask_cors import CORS
-import os, base64
-from openai import OpenAI
-from flask_jwt_extended import JWTManager, create_access_token, jwt_required, jwt_optional, get_jwt_identity
+from whatsapp_bot import send_whatsapp_message
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS for all routes
-
-# Configuration
-app.config['SECRET_KEY'] = os.getenv('SECRET_KEY', 'your_secret_key')
-app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv('DATABASE_URL', 'sqlite:///site.db')
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY', 'your_jwt_secret_key')
-
-jwt = JWTManager(app)
-
-# OpenAI setup
+CORS(app)  # This will enable CORS for all routes
 OPENAI_KEY = os.getenv("OPENAI_KEY")
 openai_client = OpenAI(api_key=OPENAI_KEY)
 THIS_MODEL = "gpt-4o-mini"
@@ -230,6 +218,7 @@ def extract_text():
     except Exception as e:
         return jsonify({"error": str(e)}), 500
 
+
 @app.route('/upload', methods=['POST'])
 def upload_image():
     data = request.get_json()
@@ -247,8 +236,12 @@ def upload_image():
     except Exception as e:
         print("Error:", e)
         result = {"status": False}
-    
-    file_path = os.path.join('uploads', 'captured_image.png')
+
+    # Ensure the uploads directory exists
+    uploads_dir = 'uploads'
+    os.makedirs(uploads_dir, exist_ok=True)
+
+    file_path = os.path.join(uploads_dir, 'captured_image.png')
     with open(file_path, 'wb') as f:
         f.write(image_data)
 
@@ -261,7 +254,7 @@ def whatsapp_webhook():
     senderId = request.values.get('From', '').strip()
 
     response_message = answer_based_on_election_info(incoming_msg)
-    send_whatsapp_message(response_message, recipient=senderId)
+    # send_whatsapp_message(response_message, recipient=senderId)
 
     return jsonify({"success": True}), 200
 

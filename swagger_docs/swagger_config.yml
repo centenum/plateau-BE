@@ -1,0 +1,31 @@
+# swagger_config.yml
+get:
+  summary: Fetch and Encrypt Voter Data
+  description: Retrieve voter data based on polling_unit, ward, and lga, then encrypt and return the data.
+  parameters:
+    - name: polling_unit
+      in: query
+      type: string
+      required: true
+      description: The polling unit name.
+    - name: ward
+      in: query
+      type: string
+      required: true
+      description: The ward name.
+    - name: lga
+      in: query
+      type: string
+      required: true
+      description: The local government area.
+  responses:
+    200:
+      description: Encrypted voter data
+      schema:
+        type: object
+        properties:
+          data:
+            type: string
+            description: Encrypted voter data
+    400:
+      description: Bad Request
